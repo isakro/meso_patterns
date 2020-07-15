@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  15 JUL 2020 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  15 JUL 2020 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,7 +627,7 @@ File: ../figures/fetch.png Graphic file (type png)
 <use ../figures/fetch.png>
 Package pdftex.def Info: ../figures/fetch.png  used on input line 98.
 (pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
- [8] [9 <../figures/fetch.png>]
+ [8 <../figures/fetch.png>] [9]
 <../figures/emergence.png, id=44, 3070.47125pt x 2988.16376pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
@@ -719,13 +719,13 @@ Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 237.
 [20] [21 <../figures/em_hull_fig.png (PNG copy)> <../figures/em_buff_fig.png (P
 NG copy)>] [22 <../figures/mm_hull_fig.png (PNG copy)> <../figures/mm_buff_fig.
 png (PNG copy)>] [23 <../figures/lm_hull_fig.png (PNG copy)> <../figures/lm_buf
-f_fig.png (PNG copy)>] [24]
-<../figures/island_hist.png, id=101, 284.5029pt x 199.10385pt>
+f_fig.png (PNG copy)>]
+<../figures/island_hist.png, id=98, 284.5029pt x 199.10385pt>
 File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
 Package pdftex.def Info: ../figures/island_hist.png  used on input line 248.
 (pdftex.def)             Requested size: 292.5pt x 204.69948pt.
- [25 <../figures/island_hist.png (PNG copy)>]
+ [24] [25 <../figures/island_hist.png (PNG copy)>]
 <../figures/em_mm_fig.png, id=106, 853.5087pt x 284.5029pt>
 File: ../figures/em_mm_fig.png Graphic file (type png)
 <use ../figures/em_mm_fig.png>
@@ -760,11 +760,11 @@ le in Nor-we-gian: ht-
 Here is how much of TeX's memory you used:
  5401 strings out of 492982
  82458 string characters out of 6134896
- 162595 words of memory out of 5000000
+ 161574 words of memory out of 5000000
  8858 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,3730b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,3757b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
@@ -777,7 +777,7 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (37 pages, 71746228 bytes).
+Output written on main.pdf (37 pages, 71746008 bytes).
 PDF statistics:
  191 PDF objects out of 1000 (max. 8388607)
  122 compressed objects within 2 object streams
