@@ -2,7 +2,7 @@
 
 This repository holds data, code, figures and text files for the paper "Elucidating coastal settlement patterns in Mesolithic south-eastern Norway by means of algorithmic classification and statistical modelling". The output from the GIS analyses is available in the *gis_output* folder, making it possible to skip straight to the statistical analyses in R. 
 
-### 1. Repository contents (listed in order of analysis)
+### 1. Repository content (listed in order of analysis)
 
     .                   
     ├── gis_data
@@ -11,10 +11,8 @@ This repository holds data, code, figures and text files for the paper "Elucidat
     │   ├── sediments.gpkg            # Sediment data.
     │   ├── reg_split_north.gpkg      # Polygon for the northern Gunnarsrød region.
     │   ├── reg_split_south.gpkg      # Polygon for the southern Bamble region.
-    │   ├── studyarea
-    │   │   └── studyarea.tif         # 10 m resolution DTM for study area.
-    │   ├── region
-    │   │   └── region.tif            # 25 m resolution DTM for larger region.
+    │   ├── studyarea                 # Folder holding 10 m resolution DTM tiles for study area.
+    │   ├── region                    # Folder holding 25 m resolution DTM tiles for larger region.
     │   └── shoreline 
     │       ├── bamble_curve.csv      # Shoreline displacement curve for Bamble.
     │       ├── gunnarsrod_curve.csv  # Shoreline displacement curve for Gunnarsrød.
