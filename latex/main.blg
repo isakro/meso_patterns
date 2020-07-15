@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: custom_ref.bst
+Database file #1: references.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in parr2018
+Warning--missing institution in sorensen2015
+You've used 89 entries,
+            3218 wiz_defined-function locations,
+            1176 strings with 22580 characters,
+and the built_in function-call counts, 62073 in all, are:
+= -- 5008
+> -- 2926
+< -- 31
++ -- 1071
+- -- 958
+* -- 4328
+:= -- 10055
+add.period$ -- 296
+call.type$ -- 89
+change.case$ -- 693
+chr.to.int$ -- 105
+cite$ -- 91
+duplicate$ -- 4360
+empty$ -- 4650
+format.name$ -- 1181
+if$ -- 12167
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 855
+newline$ -- 459
+num.names$ -- 494
+pop$ -- 1902
+preamble$ -- 1
+purify$ -- 554
+quote$ -- 0
+skip$ -- 1905
+stack$ -- 0
+substring$ -- 2615
+swap$ -- 2426
+text.length$ -- 26
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1000
+warning$ -- 2
+while$ -- 627
+width$ -- 0
+write$ -- 1195
+(There were 2 warnings)
