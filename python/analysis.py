@@ -1,3 +1,15 @@
+# Python 2.7 script to be exectued from the Python shell in a GRASS GIS
+# mapset set to coordinate system WGS84/UTM zone 32N (EPSG:32632). The Python
+# module 'numpy' has to be installed and the 'v.centerpoint' add-on has to be
+# installed to GRASS GIS.
+
+# Set the working directory to the location of this file and execute the script
+# by running this from from the Python shell in GRASS GIS:
+
+# import os
+# os.chdir([insert local filepath]\analysis.py')
+# execfile('analysis.py')
+
 import os
 import sys
 import math
@@ -6,13 +18,10 @@ import numpy as np
 from numpy import genfromtxt
 from datetime import datetime
 
-# Python 2.7 script to be exectued from the Python shell in a GRASS GIS
-# mapset with coordinate system WGS84/UTM zone 32N (EPSG:32632).
-
 # Time script
 startTime = datetime.now()
 
-# Map layers required
+# Map layers required (imported below definition of functions)
 studyDtm = "studyarea" 
 regionDtm = "region"
 sites = "sites"
@@ -892,29 +901,78 @@ def emergence(polyFeature, polyData, emergeRaster, dtmMap):
                 grass.run_command('r.mask', flags = 'r')
 
 ################################# Main script ##################################
-# Imports the necessary layers to the mapset
-grass.run_command('r.import', input = os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data', studyDtm, studyDtm + '.tif'),
-                                    output = studyDtm, overwrite = True)
-grass.run_command('r.import', input = os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data', regionDtm, regionDtm + '.tif'),
-                                    output = regionDtm, overwrite = True)
-
-grass.run_command('v.import', input = os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data', sites + '.gpkg'), overwrite = True)
-grass.run_command('v.import', input = os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data', lakes + '.gpkg'), overwrite = True)
-grass.run_command('v.import', input = os.path.join(os.path.dirname(os.getcwd()),
+# Import the necessary layers to the mapset
+grass.run_command('v.import',
+                  input = os.path.join(os.path.dirname(os.getcwd()),
+                                    'gis_data', sites + '.gpkg'),
+                                    overwrite = True)
+grass.run_command('v.import',
+                  input = os.path.join(os.path.dirname(os.getcwd()),
+                                    'gis_data', lakes + '.gpkg'),
+                                    overwrite = True)
+grass.run_command('v.import',
+                  input = os.path.join(os.path.dirname(os.getcwd()),
                                     'gis_data', sediments + '.gpkg'),
                                     overwrite = True)
-grass.run_command('v.import', input = os.path.join(os.path.dirname(os.getcwd()),
+grass.run_command('v.import',
+                  input = os.path.join(os.path.dirname(os.getcwd()),
                                     'gis_data', splitSouth + '.gpkg'),
                                     overwrite = True)
-grass.run_command('v.import', input = os.path.join(os.path.dirname(os.getcwd()),
+grass.run_command('v.import',
+                  input = os.path.join(os.path.dirname(os.getcwd()),
                                     'gis_data', splitNorth + '.gpkg'),
                                     overwrite = True)
 
-# Set correct computational region.
+# The digital terrain models (DTMs) are provided as multiple tiles for storage
+# purposes. These therefore first have to be loaded in and then merged.
+
+# Retrieve name of all studyarea DTM tiles (skip files not
+# ending in .tif)
+study_dtms = []
+for file in os.listdir(os.path.join(os.path.dirname(os.getcwd()),
+                                    'gis_data\studyarea')):
+    if file.endswith(".tif"):
+        study_dtms.append(file)
+
+# Loop over and import each of these.
+# study_names is to hold the name of each raster tile
+study_names = []
+for i, n in enumerate(study_dtms, start=1):
+    grass.run_command('r.import',
+                      input = os.path.join(os.path.dirname(os.getcwd()),
+                                    'gis_data\studyarea', n),
+                      output = 'studyarea_' + str(i), overwrite = True)
+    study_names.append('studyarea_' + str(i))
+
+# Set computational region to all of the raster tiles.
+grass.run_command('g.region', raster = ','.join(study_names))
+
+# Combine these into one with r.patch, setting the output to
+# studyDtm as defined at the start of the script
+grass.run_command('r.patch', input = ','.join(study_names),
+                  output = studyDtm, overwrite = True)
+
+# Repeat the above steps for the raster tiles of the larger
+# region.
+region_dtms = []
+for file in os.listdir(os.path.join(os.path.dirname(os.getcwd()),
+                                    'gis_data\\region')): # Note double escape
+    if file.endswith(".tif"):
+        region_dtms.append(file)
+
+region_names = []
+for i, n in enumerate(region_dtms, start=1):
+    grass.run_command('r.import',
+                      input = os.path.join(os.path.dirname(os.getcwd()),
+                                    'gis_data\\region', n),
+                      output = 'region_' + str(i), overwrite = True)
+    region_names.append('region_' + str(i))
+
+grass.run_command('g.region', raster = ','.join(region_names))
+grass.run_command('r.patch', input = ','.join(region_names),
+                  output = regionDtm, overwrite = True)
+
+# Set computational region back to study area.
 grass.run_command('g.region', raster = studyDtm)
 
 # Finds the lowest elevation for each site.
@@ -930,7 +988,7 @@ grass.run_command('v.what.rast', flags = 'i', map = sites, raster = studyDtm,
                   where = 'elev_minimum ISNULL')
 
 # Extract sites with adequate quality level for further 
-# analysis situated above desired elevation.
+# analysis.
 sitesTmp = 'sites_tmp'
 quality = 3
 grass.run_command('v.extract', overwrite = True,
@@ -1284,4 +1342,5 @@ grass.run_command('db.out.ogr', overwrite = True, input = siteCentPts,
 grass.run_command('db.out.ogr', overwrite = True, input = samplePts,
                   output = '../gis_output/sample_data.csv')
 
+# Print the time it took to execute the script
 print datetime.now() - startTime
