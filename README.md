@@ -1,6 +1,6 @@
 # meso_patterns
 
-This repository holds data, code, figures and text files for the paper "Elucidating coastal settlement patterns in Mesolithic south-eastern Norway by means of algorithmic classification and statistical modelling". The output from the GIS analyses is available in the *gis_output* folder, making it possible to skip straight to the statistical analyses in R. 
+This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analyses is available in the *gis_output* folder, making it possible to skip straight to the statistical analyses in R. 
 
 ### 1. Repository content (listed in order of analysis)
 
@@ -25,7 +25,7 @@ This repository holds data, code, figures and text files for the paper "Elucidat
     │   └── sample_data.csv           # Result of GIS analysis for random sample locations.
     │   └── maps                      # Folder with precompiled maps for visualisation.
     ├── r
-    │   ├── meso_patterns.Rproj       # RStudio project. 
+    │   ├── meso_patterns.Rproj       # RStudio project (open this first when running the script). 
     │   ├── analysis.r                # Main R script.
     │   └── functions
     │       ├── functions.r           # Functions for analysis.r
@@ -35,10 +35,10 @@ This repository holds data, code, figures and text files for the paper "Elucidat
 
     
 ### 2. GIS and Python
-All GIS analyses were run in GRASS GIS 7.6.1 (GRASS Development Team 2017) with the v.centerpoint extension on Windows 10. These were run using a Python 2.7 script (Python Software Foundation) with the numpy module (van der Walt et al. 2011). The coordinate system used is WGS84/UTM zone 32N (EPSG:32632). The Python script has to be run from a GRASS mapset with the correct coordinate system. The script took about 30 days to execute on a laptop computer with an Intel Core i7-8550U 1.8GHz CPU (a crash makes this estimation imprecise). Additionally, QGIS 3.6.3 (QGIS Development Team 2019) and ArcGIS 10.6 (Esri 2018) were used for some of the visualisation.
+All GIS analyses were run in GRASS GIS 7.6.1 (GRASS Development Team 2017) with the v.centerpoint extension on Windows 10. These were run using a Python 2.7 script (Python Software Foundation) with the numpy module (van der Walt et al. 2011). The coordinate system used is WGS84/UTM zone 32N (EPSG:32632). The Python script has to be run from a GRASS mapset with the correct coordinate system (some additional instructions to run the script are given at the top of analysis.py which can be opened in a text editor). The script took about 35 days to execute on a laptop computer with an Intel Core i7-8550U 1.8GHz CPU (a crash makes this estimation imprecise). Additionally, QGIS 3.6.3 (QGIS Development Team 2019) and ArcGIS 10.6 (Esri 2018) were used for some of the visualisation.
 
 ### 3. R
-The statistical analyses were run using R 3.6.1 (R Core Team 2019). Additional libraries used were ggplot2 (Wickham 2016), GGally (Schloerke et al. 2018), gridExtra (Auguie 2017), cowplot (Wilke 2019), png (Urbanek 2013), car (Fox & Weisberg 2019), boot (Canty & Ripley 2019; Davison & Hinkley 1997), mice (van Buuren & Groothuis-Oudshoorn 2011), ModelMetrics (Hunt 2018), caret (Kuhn 2019) and randomForest (Liaw & Wiener 2002). The main script is *analysis.r*. This loads functions from *functions.r* and *plot_functions.r*. The complete R script ran in hours on the same laptop computer as the one used for the GIS analyses.  
+The statistical analyses were run using R 3.6.3 (R Core Team 2020) on Ubuntu 18.04. Additional libraries used were ggplot2 (Wickham 2016), GGally (Schloerke et al. 2018), gridExtra (Auguie 2017), cowplot (Wilke 2019), png (Urbanek 2013), car (Fox & Weisberg 2019), boot (Canty & Ripley 2019; Davison & Hinkley 1997), mice (van Buuren & Groothuis-Oudshoorn 2011), ModelMetrics (Hunt 2018), caret (Kuhn 2019) and randomForest (Liaw & Wiener 2002). The main script is *analysis.r*. This loads functions from *functions.r* and *plot_functions.r*. The complete R script ran in 14.5 hours on a laptop computer with an AMD Ryzen 5 Pro 3500U 2.1GHz CPU. 
 
 ### 4. Data 
 Apart from changing file formats and coordinate systems, as well as reducing the extent of some data, spatial data from other sources are provided in their original form. This is with the exception of *sites.gpkg*. 
@@ -48,16 +48,16 @@ Site data: https://kartkatalog.geonorge.no/metadata/c6896f24-71f9-4203-9b6f-faf3
 Stray finds: https://kartkatalog.geonorge.no/metadata/17150d2c-b50d-4792-80f4-0cb2ec5eaa79   
 
 The site data has additionally been given a quality score based on the information available from the database *Askeladden*, associated with the spatial geometries (see article for more on this). The database is run by the Directorate for Cultural Heritage. This is not open, but researchers, students, and cultural resource management personell can apply for access:
-https://askeladden.ra.no/Askeladden (the page is currently only available in Norwegian). The correct sites can be found using the IDs provided in the column 'askeladden_id' of *sites.gpkg*.
+https://askeladden.ra.no/Askeladden (the page is currently only available in Norwegian). The sites can be found using the IDs provided in the column 'askeladden_id' of *sites.gpkg*.
 
 ### 5. Licenses
 The following data are under [the Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0):  
 * *sites.gpkg* is slightly modified site data originally provided by the Norwegian Directorate for Cultural Heritage (see above).  
 * *lakes.gpkg* is from "the Norwegian lake database" as provided by [the Norwegian Water Resources and Energy Directorate](http://nedlasting.nve.no/gis/) (page only available in Norwegian).  
 * *sediments.gpkg* is from "Sediments" as provided by [the Geological Survey of Norway](https://www.ngu.no/en/topic/datasets).   
-* GeoTIFF files in gis_data/studyarea are from "National elevation model DTM10" as provided by [the Norwegian Mapping Authority](https://hoydedata.no/LaserInnsyn/).
+* GeoTIFF files in *gis_data\studyarea\* are from "National elevation model DTM10" as provided by [the Norwegian Mapping Authority](https://hoydedata.no/LaserInnsyn/).
 
-GeoTIFF files in gis_data/region are from EU-DEM v.1.1 as provided by [the European Union, Copernicus Land Monitoring Service 2018, European Environment Agency](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1). This is open and free following the Copernicus data and information policy Regulation (EU) No 1159/2013 of 12 July 2013: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R1159
+GeoTIFF files in *gis_data\region\* are from EU-DEM v.1.1 as provided by [the European Union, Copernicus Land Monitoring Service 2018, European Environment Agency](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1). This is open and free following the Copernicus data and information policy Regulation (EU) No 1159/2013 of 12 July 2013: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R1159
 
 The following files are based on shoreline displacement data derived from Sørensen et al. 2015, available in Solheim 2017, and Sørensen et al. 2014. Both are under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/):   
 * *bamble.csv*, *gunnarsrod.csv*, *recode_bamble.txt*, *recode_gunnarsrod.txt*
@@ -87,7 +87,7 @@ Liaw, A. & M. Wiener 2002. Classification and Regression by randomForest. *R New
 
 Python Software Foundation. Python Language Reference, version 2.7. Available at http://www.python.org
 
-R Core Team 2019. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna. https://www.R-project.org/
+R Core Team 2020. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna. https://www.R-project.org/
 
 Schloerke, B, J. Crowley, D. Cook, F. Briatte, M. Marbach, E. Thoen, A. Elberg & J. Larmarange 2018. *GGally: Extension to 'ggplot2'*.  R package version 1.4.0. https://CRAN.R-project.org/package=GGally
 
