@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  15 JUL 2020 23:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  16 JUL 2020 01:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,25 +490,25 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@StepNumber=\count96
 \FV@OutFile=\write3
 )
-Package newfloat Info: New float `boxing' with options `' on input line 20.
+Package newfloat Info: New float `boxing' with options `' on input line 24.
 \c@boxing=\count97
 \newfloat@ftype=\count98
-Package newfloat Info: float type `boxing'=8 on input line 20.
+Package newfloat Info: float type `boxing'=8 on input line 24.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -582,11 +582,11 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 27.
+(Font)              <14.4> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 27.
+(Font)              <7> on input line 31.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
@@ -594,20 +594,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 48.
+(Font)              <12> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 48.
+(Font)              <8> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 48.
+(Font)              <6> on input line 52.
 
-Overfull \hbox (0.70047pt too wide) in paragraph at lines 48--65
+Overfull \hbox (0.70047pt too wide) in paragraph at lines 52--69
  [] 
  []
 
 <../figures/site_overview.png, id=16, 2961.0625pt x 2181.14874pt>
 File: ../figures/site_overview.png Graphic file (type png)
 <use ../figures/site_overview.png>
-Package pdftex.def Info: ../figures/site_overview.png  used on input line 73.
+Package pdftex.def Info: ../figures/site_overview.png  used on input line 77.
 (pdftex.def)             Requested size: 487.5pt x 359.07526pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -615,7 +615,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <../figures/displacement.png, id=17, 569.0058pt x 355.5684pt>
 File: ../figures/displacement.png Graphic file (type png)
 <use ../figures/displacement.png>
-Package pdftex.def Info: ../figures/displacement.png  used on input line 81.
+Package pdftex.def Info: ../figures/displacement.png  used on input line 85.
 (pdftex.def)             Requested size: 390.0pt x 243.70937pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -625,96 +625,96 @@ ng>] [7]
 <../figures/fetch.png, id=35, 420.8523pt x 141.6492pt>
 File: ../figures/fetch.png Graphic file (type png)
 <use ../figures/fetch.png>
-Package pdftex.def Info: ../figures/fetch.png  used on input line 98.
+Package pdftex.def Info: ../figures/fetch.png  used on input line 102.
 (pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
  [8 <../figures/fetch.png>] [9]
 <../figures/emergence.png, id=44, 3070.47125pt x 2988.16376pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
-Package pdftex.def Info: ../figures/emergence.png  used on input line 112.
+Package pdftex.def Info: ../figures/emergence.png  used on input line 116.
 (pdftex.def)             Requested size: 390.0pt x 379.53818pt.
  [10] [11 <../figures/emergence.png (PNG copy)>] [12] [13]
-Overfull \hbox (11.35417pt too wide) in paragraph at lines 135--135
+Overfull \hbox (11.35417pt too wide) in paragraph at lines 139--139
 \OT1/cmr/m/n/12 Relatively high pre-dict-ive power, ease of im-ple-ment-a-tion 
 and its non-parametric
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 156.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 160.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 138--157
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 142--161
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--157
+Underfull \hbox (badness 10000) in paragraph at lines 142--161
 
  []
 
 [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 164--182
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 168--186
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--182
+Underfull \hbox (badness 10000) in paragraph at lines 168--186
 
  []
 
 [17] [18] [19]
-Overfull \hbox (77.61975pt too wide) in paragraph at lines 192--207
+Overfull \hbox (77.61975pt too wide) in paragraph at lines 196--211
 [] [] 
  []
 
 <../figures/em_hull_fig.png, id=80, 853.5087pt x 284.5029pt>
 File: ../figures/em_hull_fig.png Graphic file (type png)
 <use ../figures/em_hull_fig.png>
-Package pdftex.def Info: ../figures/em_hull_fig.png  used on input line 213.
+Package pdftex.def Info: ../figures/em_hull_fig.png  used on input line 217.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/em_buff_fig.png, id=81, 853.5087pt x 284.5029pt>
 File: ../figures/em_buff_fig.png Graphic file (type png)
 <use ../figures/em_buff_fig.png>
-Package pdftex.def Info: ../figures/em_buff_fig.png  used on input line 217.
+Package pdftex.def Info: ../figures/em_buff_fig.png  used on input line 221.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/mm_hull_fig.png, id=82, 853.5087pt x 284.5029pt>
 File: ../figures/mm_hull_fig.png Graphic file (type png)
 <use ../figures/mm_hull_fig.png>
-Package pdftex.def Info: ../figures/mm_hull_fig.png  used on input line 223.
+Package pdftex.def Info: ../figures/mm_hull_fig.png  used on input line 227.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/mm_buff_fig.png, id=83, 853.5087pt x 284.5029pt>
 File: ../figures/mm_buff_fig.png Graphic file (type png)
 <use ../figures/mm_buff_fig.png>
-Package pdftex.def Info: ../figures/mm_buff_fig.png  used on input line 227.
+Package pdftex.def Info: ../figures/mm_buff_fig.png  used on input line 231.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/lm_hull_fig.png, id=84, 853.5087pt x 284.5029pt>
 File: ../figures/lm_hull_fig.png Graphic file (type png)
 <use ../figures/lm_hull_fig.png>
-Package pdftex.def Info: ../figures/lm_hull_fig.png  used on input line 233.
+Package pdftex.def Info: ../figures/lm_hull_fig.png  used on input line 237.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/lm_buff_fig.png, id=85, 853.5087pt x 284.5029pt>
 File: ../figures/lm_buff_fig.png Graphic file (type png)
 <use ../figures/lm_buff_fig.png>
-Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 237.
+Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 241.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 [20] [21 <../figures/em_hull_fig.png (PNG copy)> <../figures/em_buff_fig.png (P
 NG copy)>] [22 <../figures/mm_hull_fig.png (PNG copy)> <../figures/mm_buff_fig.
@@ -723,23 +723,23 @@ f_fig.png (PNG copy)>]
 <../figures/island_hist.png, id=98, 284.5029pt x 199.10385pt>
 File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
-Package pdftex.def Info: ../figures/island_hist.png  used on input line 248.
+Package pdftex.def Info: ../figures/island_hist.png  used on input line 252.
 (pdftex.def)             Requested size: 292.5pt x 204.69948pt.
  [24] [25 <../figures/island_hist.png (PNG copy)>]
 <../figures/em_mm_fig.png, id=106, 853.5087pt x 284.5029pt>
 File: ../figures/em_mm_fig.png Graphic file (type png)
 <use ../figures/em_mm_fig.png>
-Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 256.
+Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 260.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/em_lm_fig.png, id=107, 853.5087pt x 284.5029pt>
 File: ../figures/em_lm_fig.png Graphic file (type png)
 <use ../figures/em_lm_fig.png>
-Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 260.
+Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 264.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/mm_lm_fig.png, id=108, 853.5087pt x 284.5029pt>
 File: ../figures/mm_lm_fig.png Graphic file (type png)
 <use ../figures/mm_lm_fig.png>
-Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 266.
+Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 270.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 
 [26] [27 <../figures/em_mm_fig.png (PNG copy)> <../figures/em_lm_fig.png (PNG c
@@ -756,28 +756,32 @@ Underfull \hbox (badness 3724) in paragraph at lines 217--220
 le in Nor-we-gian: ht-
  []
 
-[32] [33] [34] [35] [36]) [37] (./main.aux) ) 
+[32] [33] [34] [35] [36]) [37] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  5401 strings out of 492982
  82458 string characters out of 6134896
- 161574 words of memory out of 5000000
+ 161577 words of memory out of 5000000
  8858 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,9n,92p,3757b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (37 pages, 71746008 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
+b>
+Output written on main.pdf (37 pages, 71746076 bytes).
 PDF statistics:
  191 PDF objects out of 1000 (max. 8388607)
  122 compressed objects within 2 object streams
