@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Archaeological context and case study}{}% 2
+\BOOKMARK [1][-]{section.3}{Site data}{}% 3
+\BOOKMARK [1][-]{section.4}{Sampling scheme}{}% 4
+\BOOKMARK [1][-]{section.5}{Locational variables}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Wind fetch}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Visibility}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{Shoreline displacement}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.4}{Island location}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.5}{Sediments and infiltration ability}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.6}{Aspect}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Quantitative framework}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Model building strategies}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Random forests}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{Model validation}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.4}{Model parameters and preprocessing}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Results}{}% 17
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 18
