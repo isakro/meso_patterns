@@ -4,10 +4,10 @@
 # installed to GRASS GIS.
 
 # Set the working directory to the location of this file and execute the script
-# by running this from from the Python shell in GRASS GIS:
+# by running the following code from from the Python shell in GRASS GIS:
 
 # import os
-# os.chdir([insert local filepath]\analysis.py')
+# os.chdir([insert local filepath]/analysis.py')
 # execfile('analysis.py')
 
 import os
@@ -21,7 +21,7 @@ from datetime import datetime
 # Time script
 startTime = datetime.now()
 
-# Map layers required (imported below definition of functions)
+# Map layers required (these are imported below the definition of functions)
 studyDtm = "studyarea" 
 regionDtm = "region"
 sites = "sites"
@@ -560,137 +560,136 @@ def computeFetch(pointFeature, pointData, mapMax,
 
     elev = []
     for point in pointData:
-        if point[5] == '':
-            pointCat = str(point[0])
-            pointX = str(point[3])
-            pointY = str(point[4])
+        pointCat = str(point[0])
+        pointX = str(point[3])
+        pointY = str(point[4])
 
-            # Make sure that the resolution and comp region are correct
-            # for sea level change
-            grass.run_command('g.region', vector = regionVect)
-            
-            # Raise the sealevel to the point, rounded up to make sure the point
-            # ends up in the sea. This is necessary for the subsequent clipping
-            # to work. If there already exists a sea vector at a points elevation,
-            # this is simply reused
-            seaVect = 'seavect_' + str(int(math.ceil(float(point[2]))))
-            if math.ceil(float(point[2])) not in elev:
-                # Create binary representation of sealevel
-                seaBin = 'sea_bin_' + str(int(math.ceil(float(point[2]))))
-                grass.mapcalc(seaBin + ' = if(' + dtmMap +' < ' +
-                                 str(math.ceil(float(point[2]))) +
-                                 ', 1, null())', overwrite = True)
-
-                # Vectorise the binary sea raster
-                grass.run_command('r.to.vect', overwrite = True, input = seaBin,
-                                     output = seaVect, type = 'area')
-                elev.append(math.ceil(float(point[2])))
-            
-            # Create buffer around point 
-            polyBuffer = "temp_buffer"
-            lineBuffer = "temp_buffer_line"
-            grass.run_command('v.buffer', overwrite = True, input = pointFeature,
-                                cats = pointCat, output = polyBuffer,
-                                distance = mapMax)
-            
-            # Adds table to the vector database and establishes
-            # connection (required for next step)
-            grass.run_command('v.db.addtable', map = polyBuffer)
-            
-            # Converts the border of the polygon buffer to a line
-            grass.run_command('v.to.lines', overwrite = True, input = polyBuffer,
-                                 output = lineBuffer)
-         
-            # Finds the length of the line buffer
-            bufferReport = grass.read_command('v.report', map = lineBuffer,
-                                                 option = 'length')
-            bReportByLine = bufferReport.split('\n')
-            bufferLength = float(bReportByLine[1].split('|')[1])
-
-            # Finds the required distance between end-points of each radian
-            deg = bufferLength / 360
-            distInterval = deg * degInterval
-
-            # Creates a text document to hold the rules to be used in
-            # v.segment below
-            dist = 0.0
-            segRules = 'segment_rules.txt'
-            f = open(segRules, 'w+')
-            for i in range(1, nInterval + 1):
-                f.write("P %d 1 %f\n" % (i, dist))
-                dist = dist + distInterval
-            f.close()
-
-            # Create end-point every n degree along line buffer:
-            circPts = "temp_segment"
-            grass.run_command('v.segment', overwrite = True, input = lineBuffer,
-                                 output = circPts, rules = segRules)
-         
-            # Retrieve the coordinates for end-points
-            radialPtsReport = grass.read_command('v.report', map = circPts,
-                                                    option = 'coor')
-            radialReportByLine = radialPtsReport.split('\n')
-            nPts = len(radialReportByLine) - 2
-
-            # Set up ascii text document to create radial lines
-            # between central point and end-points
-            radialsTxt = 'radials_rules.txt'
-            f = open(radialsTxt, 'w+')
-            for pt in range(1, nPts + 1):
-                xCoord = radialReportByLine[pt].split('|')[1]
-                yCoord = radialReportByLine[pt].split('|')[2]
-                f.write("L 2 1\n %s %s\n %s %s\n 1 %d\n" %
-                     (pointX, pointY, xCoord, yCoord, pt))
-            f.close()
-
-            # Create radials from central point to end-points
-            radials = "temp_radials"
-            grass.run_command('v.edit', overwrite = True, map = radials,
-                                tool = 'create')
-            grass.run_command('v.edit', flags = 'n', map = radials, tool = 'add',
-                                input = radialsTxt)
-
-            # Clip radials by the vector representing the 
-            # sea in the study region
-            radialsClipped1 = 'temp_radials_clipped1'
-            grass.run_command('v.clip', overwrite = True, input = radials,
-                                clip = seaVect, output = radialsClipped1)
-            
-            # Clip radials by the vector representing the the modern day
-            # coastline in the larger region
-            radialsClipped = "temp_radials_clipped"
-            grass.run_command('v.clip', overwrite = True, input = radialsClipped1,
-                                clip = regionVect, output = radialsClipped)
-            
-            # Retrieve lines that are intersecting the point after being clipped.
-            # (v.select seems to have an issue with rounding error, causing it to
-            # miss some of the lines intersecting the point)
-            fetchLines = 'fetch_lines_' + pointCat
-            radialsIds = grass.read_command('v.edit', map = radialsClipped,
-                                              type = 'line', tool = 'select', 
-                                              coords = pointX + ',' + pointY)
-            grass.run_command('v.edit', overwrite = True, map = fetchLines,
-                                tool = 'create')
-            grass.run_command('v.edit', map = fetchLines, type = 'line',
-                                tool = 'copy', ids = radialsIds,
-                                bgmap = radialsClipped)
-
-            # Find the mean length of the fetch lines
-            fetchReport = grass.read_command('v.report', map = fetchLines,
-                            option = 'length')
-            fetchByLine = fetchReport.split('\n')
-            nFetch = len(fetchByLine) - 2
-            fetchLengths = []
-            for line in range(1, nFetch + 1):
-                fetchLengths.append(float(fetchByLine[line].split('|')[1]))
-            avgFetch = sum(fetchLengths)/len(fetchLengths)
-
-            # Update the point feature layer 
-            # (column avg_fetch has to already exist)
-            grass.run_command('v.db.update', map = pointFeature, layer = '1', 
-                                column = 'avg_fetch', value = avgFetch, 
-                                where = 'cat = ' + pointCat)
+        # Make sure that the resolution and comp region are correct
+        # for sea level change
+        grass.run_command('g.region', vector = regionVect)
         
+        # Raise the sealevel to the point, rounded up to make sure the point
+        # ends up in the sea. This is necessary for the subsequent clipping
+        # to work. If there already exists a sea vector at a points elevation,
+        # this is simply reused
+        seaVect = 'seavect_' + str(int(math.ceil(float(point[2]))))
+        if math.ceil(float(point[2])) not in elev:
+            # Create binary representation of sealevel
+            seaBin = 'sea_bin_' + str(int(math.ceil(float(point[2]))))
+            grass.mapcalc(seaBin + ' = if(' + dtmMap +' < ' +
+                             str(math.ceil(float(point[2]))) +
+                             ', 1, null())', overwrite = True)
+
+            # Vectorise the binary sea raster
+            grass.run_command('r.to.vect', overwrite = True, input = seaBin,
+                                 output = seaVect, type = 'area')
+            elev.append(math.ceil(float(point[2])))
+        
+        # Create buffer around point 
+        polyBuffer = "temp_buffer"
+        lineBuffer = "temp_buffer_line"
+        grass.run_command('v.buffer', overwrite = True, input = pointFeature,
+                            cats = pointCat, output = polyBuffer,
+                            distance = mapMax)
+        
+        # Adds table to the vector database and establishes
+        # connection (required for next step)
+        grass.run_command('v.db.addtable', map = polyBuffer)
+        
+        # Converts the border of the polygon buffer to a line
+        grass.run_command('v.to.lines', overwrite = True, input = polyBuffer,
+                             output = lineBuffer)
+     
+        # Finds the length of the line buffer
+        bufferReport = grass.read_command('v.report', map = lineBuffer,
+                                             option = 'length')
+        bReportByLine = bufferReport.split('\n')
+        bufferLength = float(bReportByLine[1].split('|')[1])
+
+        # Finds the required distance between end-points of each radian
+        deg = bufferLength / 360
+        distInterval = deg * degInterval
+
+        # Creates a text document to hold the rules to be used in
+        # v.segment below
+        dist = 0.0
+        segRules = 'segment_rules.txt'
+        f = open(segRules, 'w+')
+        for i in range(1, nInterval + 1):
+            f.write("P %d 1 %f\n" % (i, dist))
+            dist = dist + distInterval
+        f.close()
+
+        # Create end-point every n degree along line buffer:
+        circPts = "temp_segment"
+        grass.run_command('v.segment', overwrite = True, input = lineBuffer,
+                             output = circPts, rules = segRules)
+     
+        # Retrieve the coordinates for end-points
+        radialPtsReport = grass.read_command('v.report', map = circPts,
+                                                option = 'coor')
+        radialReportByLine = radialPtsReport.split('\n')
+        nPts = len(radialReportByLine) - 2
+
+        # Set up ascii text document to create radial lines
+        # between central point and end-points
+        radialsTxt = 'radials_rules.txt'
+        f = open(radialsTxt, 'w+')
+        for pt in range(1, nPts + 1):
+            xCoord = radialReportByLine[pt].split('|')[1]
+            yCoord = radialReportByLine[pt].split('|')[2]
+            f.write("L 2 1\n %s %s\n %s %s\n 1 %d\n" %
+                 (pointX, pointY, xCoord, yCoord, pt))
+        f.close()
+
+        # Create radials from central point to end-points
+        radials = "temp_radials"
+        grass.run_command('v.edit', overwrite = True, map = radials,
+                            tool = 'create')
+        grass.run_command('v.edit', flags = 'n', map = radials, tool = 'add',
+                            input = radialsTxt)
+
+        # Clip radials by the vector representing the 
+        # sea in the study region
+        radialsClipped1 = 'temp_radials_clipped1'
+        grass.run_command('v.clip', overwrite = True, input = radials,
+                            clip = seaVect, output = radialsClipped1)
+        
+        # Clip radials by the vector representing the the modern day
+        # coastline in the larger region
+        radialsClipped = "temp_radials_clipped"
+        grass.run_command('v.clip', overwrite = True, input = radialsClipped1,
+                            clip = regionVect, output = radialsClipped)
+        
+        # Retrieve lines that are intersecting the point after being clipped.
+        # (v.select seems to have an issue with rounding error, causing it to
+        # miss some of the lines intersecting the point)
+        fetchLines = 'fetch_lines_' + pointCat
+        radialsIds = grass.read_command('v.edit', map = radialsClipped,
+                                          type = 'line', tool = 'select', 
+                                          coords = pointX + ',' + pointY)
+        grass.run_command('v.edit', overwrite = True, map = fetchLines,
+                            tool = 'create')
+        grass.run_command('v.edit', map = fetchLines, type = 'line',
+                            tool = 'copy', ids = radialsIds,
+                            bgmap = radialsClipped)
+
+        # Find the mean length of the fetch lines
+        fetchReport = grass.read_command('v.report', map = fetchLines,
+                        option = 'length')
+        fetchByLine = fetchReport.split('\n')
+        nFetch = len(fetchByLine) - 2
+        fetchLengths = []
+        for line in range(1, nFetch + 1):
+            fetchLengths.append(float(fetchByLine[line].split('|')[1]))
+        avgFetch = sum(fetchLengths)/len(fetchLengths)
+
+        # Update the point feature layer 
+        # (column avg_fetch has to already exist)
+        grass.run_command('v.db.update', map = pointFeature, layer = '1', 
+                            column = 'avg_fetch', value = avgFetch, 
+                            where = 'cat = ' + pointCat)
+    
     # Reset computational region
     grass.run_command('g.region', raster = studyDtm)
 
@@ -1033,7 +1032,7 @@ for row in elevByRow[1:-1]:
                       list(reversed(meany.reshape(-1).tolist())),
                       list(reversed(calYears)))
     
-    # Check what phase this corresponds to
+    # Check what phase this corresponds to in the look-up
     phase = phases[bisect.bisect_right(phases, (sdate,))][1]
 
     # And update the record
@@ -1066,6 +1065,7 @@ for row in sitByRow[1:-1]:
                     where = 'cat = ' + row.split('|')[0])
     
 # Exclude sites with a shoreline date outside the desired range
+# (ascribed NULL to phase)
 sitesQu = 'sites_q' + str(quality)
 grass.run_command('v.extract', input = sitesTmp, overwrite = True,
                   where = "phase != 'NULL'", output = sitesQu)
@@ -1081,7 +1081,7 @@ grass.run_command('v.rast.stats', flags = 'c', map = sitesQu, raster = slopeMap,
                   column_prefix = 'slope', method = 'average')
 
 # Find average slope for the remaining sites (site polygons not hitting center 
-# of raster cells, see elevation for sites above).
+# of raster cells, see elevation above).
 grass.run_command('v.what.rast', flags = 'i', map = sitesQu, raster = slopeMap,
                   type = 'centroid', column = 'slope_average', 
                   where = 'slope_average ISNULL')
@@ -1096,7 +1096,7 @@ grass.run_command('v.what.rast', flags = 'i', map = sitesQu, raster = aspectMap,
                   type = 'centroid', column = 'aspect_average', 
                   where = 'aspect_average ISNULL')
 
-# Rasterise the sediment polygon by infiltration level. Resolution of 1 seems good
+# Rasterise the sediment polygons by infiltration level. Resolution of 1 seems good
 # enough for both sediment and site polygons (see definition of sedimentMode()
 # for more on this).
 grass.run_command('g.region', vector = sediments, res= '1')
