@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  2 SEP 2020 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  3 SEP 2020 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,6 +848,10 @@ Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 270.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 
 
+Package natbib Warning: Citation `bjerck2016' on page 25 undefined on input lin
+e 275.
+
+
 Package natbib Warning: Citation `boethius2017' on page 25 undefined on input l
 ine 275.
 
@@ -856,12 +860,12 @@ Package natbib Warning: Citation `boethius2018' on page 25 undefined on input l
 ine 275.
 
 
-Package natbib Warning: Citation `bjerck2009' on page 25 undefined on input lin
-e 275.
-
-
 Package natbib Warning: Citation `bjeck2009' on page 25 undefined on input line
- 275.
+ 276.
+
+
+Package natbib Warning: Citation `glorstad2013' on page 25 undefined on input l
+ine 276.
 
 [25 <../figures/island_hist.png (PNG copy)>] [26 <../figures/em_mm_fig.png (PNG
  copy)> <../figures/em_lm_fig.png (PNG copy)>] [27 <../figures/mm_lm_fig.png (P
@@ -881,24 +885,24 @@ le in Nor-we-gian: ht-
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
 [38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 097B181D3AFC7462235511995C090AD1;1097.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 9005 strings out of 492982
- 136962 string characters out of 6134896
+ 9006 strings out of 492982
+ 136976 string characters out of 6134896
  242379 words of memory out of 5000000
- 12284 multiletter control sequences out of 15000+600000
+ 12285 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,2946b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2552b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -911,10 +915,10 @@ sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on main.pdf (38 pages, 71767269 bytes).
+Output written on main.pdf (38 pages, 71767338 bytes).
 PDF statistics:
- 754 PDF objects out of 1000 (max. 8388607)
- 671 compressed objects within 7 object streams
+ 756 PDF objects out of 1000 (max. 8388607)
+ 673 compressed objects within 7 object streams
  164 named destinations out of 1000 (max. 500000)
  215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
