@@ -3,49 +3,50 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: custom_ref.bst
 Database file #1: references.bib
+Warning--I didn't find a database entry for "ritchie2016"
 Warning--I didn't find a database entry for "bjeck2009"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty journal in parr2018
 Warning--missing institution in sorensen2015
-You've used 93 entries,
+You've used 94 entries,
             3218 wiz_defined-function locations,
-            1197 strings with 23501 characters,
-and the built_in function-call counts, 64911 in all, are:
-= -- 5236
-> -- 3056
+            1201 strings with 23666 characters,
+and the built_in function-call counts, 65349 in all, are:
+= -- 5271
+> -- 3071
 < -- 32
-+ -- 1118
-- -- 1001
-* -- 4525
-:= -- 10515
-add.period$ -- 309
-call.type$ -- 93
-change.case$ -- 723
-chr.to.int$ -- 109
-cite$ -- 95
-duplicate$ -- 4563
-empty$ -- 4864
-format.name$ -- 1233
-if$ -- 12720
++ -- 1124
+- -- 1006
+* -- 4546
+:= -- 10599
+add.period$ -- 312
+call.type$ -- 94
+change.case$ -- 729
+chr.to.int$ -- 110
+cite$ -- 96
+duplicate$ -- 4597
+empty$ -- 4900
+format.name$ -- 1238
+if$ -- 12802
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 898
-newline$ -- 479
-num.names$ -- 516
-pop$ -- 1983
+missing$ -- 904
+newline$ -- 484
+num.names$ -- 521
+pop$ -- 1997
 preamble$ -- 1
-purify$ -- 578
+purify$ -- 583
 quote$ -- 0
-skip$ -- 1985
+skip$ -- 2001
 stack$ -- 0
-substring$ -- 2752
-swap$ -- 2541
+substring$ -- 2763
+swap$ -- 2553
 text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1048
+type$ -- 1060
 warning$ -- 2
-while$ -- 657
+while$ -- 662
 width$ -- 0
-write$ -- 1249
-(There were 3 warnings)
+write$ -- 1261
+(There were 4 warnings)

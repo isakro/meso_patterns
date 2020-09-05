@@ -361,11 +361,12 @@ hull_isl <- ggplot(isls_h, aes(x = phase, fill = factor(loc,
   geom_bar(position = 'dodge', alpha = 0.5, colour = 'black') + 
   theme_classic() +
   theme(legend.title = element_blank()) +
+  scale_y_continuous(breaks=c(0 , 200, 400, 600, 800)) +
+  ylim(c(0,830)) +
   xlab('') +
   ggtitle('Hull samples') +
   scale_fill_manual('legend', 
-                    values = c('Island' = '#E69F00', 'Mainland' = '#56B4E9')) + 
-  theme(legend.position = 'bottom', legend.spacing.x = unit(0.2, 'cm'))
+                    values = c('Island' = '#E69F00', 'Mainland' = '#56B4E9'))
 
 # Retrieve data - Buffer sample
 isls_b <- rbind.data.frame(dt[dt$phase == 'em' & dt$class == 'buff',],
@@ -373,25 +374,49 @@ isls_b <- rbind.data.frame(dt[dt$phase == 'em' & dt$class == 'buff',],
                            dt[dt$phase == 'lm' & dt$class == 'buff',])
 isls_b$phase <- factor(isls_b$phase, levels(isls_b$phase)[c(1,3,2)])
 
-# Plot
+# Plot buffer sample data
 buff_isl <- ggplot(isls_b, aes(x = phase, fill = factor(loc,
                           labels = c('Island', 'Mainland')))) +
   geom_bar(position = 'dodge', alpha = 0.5, colour = 'black') + 
   theme_classic() +
   theme(legend.title = element_blank()) +
+  scale_y_continuous(breaks=c(0 , 200, 400, 600, 800)) +
+  ylim(c(0,830)) +
   xlab('') +
+  ylab('') +
   ggtitle('Buffer samples') +
   scale_fill_manual('legend', values = c('Island' = '#E69F00',
                                          'Mainland' = '#56B4E9')) 
+# Retrieve data - Sites
+isls_sites <- rbind.data.frame(dt[dt$phase == 'em' & dt$class == 'site',],
+                           dt[dt$phase == 'mm' & dt$class == 'site',],
+                           dt[dt$phase == 'lm' & dt$class == 'site',])
+isls_sites$phase <- factor(isls_sites$phase, levels(isls_sites$phase)[c(1,3,2)])
 
-# Retireve legend to have one for both plots
-leg <- g_legend(hull_isl)
+# Plot site data
+sites_isl <- ggplot(isls_sites, aes(x = phase, fill = factor(loc,
+                                                        labels = c('Island', 'Mainland')))) +
+  geom_bar(position = 'dodge', alpha = 0.5, colour = 'black') + 
+  theme_classic() +
+  theme(legend.title = element_blank()) +
+  ylim(c(0,120)) +
+  xlab('') +
+  ylab('') +
+  ggtitle('Sites') +
+  scale_fill_manual('legend', values = c('Island' = '#E69F00',
+                                         'Mainland' = '#56B4E9')) +
+  theme(legend.position = 'bottom', legend.spacing.x = unit(0.2, 'cm'))
 
+# Retrieve the legend from the site plot
+leg <- g_legend(sites_isl)
+
+# Combine all the plots and save to file
 island_hist <- grid.arrange(arrangeGrob(hull_isl + 
                   theme(legend.position = 'none'),
-                  buff_isl + theme(legend.position = 'none'), nrow = 1),
-                            leg, nrow = 2, heights = c(10,1))
-ggsave('../figures/island_hist.png', island_hist, width = 10, height = 7,
+                  buff_isl + theme(legend.position = 'none'),
+                  sites_isl + theme(legend.position = 'none'), nrow = 1),
+                  leg, nrow = 2, heights = c(10,1))
+ggsave('../figures/island_hist.png', island_hist, width = 15, height = 8,
        units = 'cm', dpi = 600)
 
 # Retrieve sites per phase with corresponding hull samples

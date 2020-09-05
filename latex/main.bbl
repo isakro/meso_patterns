@@ -1,4 +1,4 @@
-\begin{thebibliography}{93}
+\begin{thebibliography}{94}
 \providecommand{\natexlab}[1]{#1}
 {\catcode`\|=0\catcode`\#=12\catcode`\@=11\catcode`\\=12
 |immediate|write|@auxout{\expandafter\ifx\csname
@@ -332,6 +332,12 @@ James, G, Witten, D, Hastie, T \harvardand{} Tibshirani, R \harvardyearleft
 \newblock \emph{An Introduction to Statistical Learning: with Applications in
   R}.
 \newblock New York: Springer.
+
+\harvarditem{J{\o}rgensen}{2020}{jorgensen2020}
+J{\o}rgensen, EK \harvardyearleft 2020\harvardyearright{}.
+\newblock Scalar effects in ground slate technology and the adaptive
+  consequences for circumpolar maritime hunter-gatherers.
+\newblock \emph{Journal of Archaeological Method and Theory}.
 
 \harvarditem{Kohler \harvardand{} Parker}{1986}{kohler1986}
 Kohler, TA \harvardand{} Parker, SC \harvardyearleft 1986\harvardyearright{}.
