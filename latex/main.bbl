@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{93}
 \providecommand{\natexlab}[1]{#1}
 {\catcode`\|=0\catcode`\#=12\catcode`\@=11\catcode`\\=12
 |immediate|write|@auxout{\expandafter\ifx\csname
@@ -67,12 +67,38 @@ Bjerck, HB \harvardyearleft 2017\harvardyearright{}.
   {Y{\'a}mana} of {Tierra del Fuego}.
 \newblock \emph{The Journal of Island and Coastal Archaeology}, 12(2):276--299.
 
+\harvarditem[Bjerck et~al.]{Bjerck, Breivik, Piana \harvardand{}
+  Zangrando}{2016}{bjerck2016}
+Bjerck, HB, Breivik, HM, Piana, EL \harvardand{} Zangrando, JFA
+  \harvardyearleft 2016\harvardyearright{}.
+\newblock Exploring the role of pinnipeds in the human colonization of the
+  seascapes of patagonia and scandinavia.
+\newblock In: Bjerck, HB, Breivik, HM, Fretheim, SE, Piana, EL, Skar, B,
+  Tivoli, AM \harvardand{} Zangrando, JFA (eds.) \emph{Marine Ventures:
+  Archaeological Perspectives on Human-Sea Relations}, pp. 53--73. Sheffield:
+  Equinox Publishing.
+
 \harvarditem{Bjerck \harvardand{} Zangrando}{2013}{bjerck2013}
 Bjerck, HB \harvardand{} Zangrando, AF \harvardyearleft
   2013\harvardyearright{}.
 \newblock Marine ventures: Comparative perspectives on the dynamics of early
   human approaches to the seascapes of {Tierra del Fuego and Norway}.
 \newblock \emph{The Journal of Island and Coastal Archaeology}, 8(1):79--90.
+
+\harvarditem{Boethius}{2017}{boethius2017}
+Boethius, A \harvardyearleft 2017\harvardyearright{}.
+\newblock {Signals of sedentism: Faunal exploitation as evidence of a
+  delayed-return economy at Norje Sunnansund, an Early Mesolithic site in
+  south-eastern Sweden}.
+\newblock \emph{Quaternary Science Reviews}, 162:145--168.
+
+\harvarditem{Boethius \harvardand{} Ahlstr{\"o}m}{2018}{boethius2018}
+Boethius, A \harvardand{} Ahlstr{\"o}m, T \harvardyearleft
+  2018\harvardyearright{}.
+\newblock {Fish and resilience among Early Holocene foragers of southern
+  Scandinavia: A fusion of stable isotopes and zooarchaeology through Bayesian
+  mixing modelling}.
+\newblock \emph{Journal of Archaeological Science}, 93:196--210.
 
 \harvarditem[Brand et~al.]{Brand, {van Buuren}, {le Cessie} \harvardand{} {van
   den Hout}}{2018}{brand2018}
@@ -220,7 +246,7 @@ Garcia, A \harvardyearleft 2013\harvardyearright{}.
 
 \harvarditem{Gillings \harvardand{} Wheatley}{2020}{gillings2020}
 Gillings, M \harvardand{} Wheatley, D \harvardyearleft 2020\harvardyearright{}.
-\newblock Gis-based visibility analysis.
+\newblock {GIS}-based visibility analysis.
 \newblock In: Gillings, M, Hacigüzeller, P \harvardand{} Lock, G (eds.)
   \emph{Archaeological Spatial Analysis: A Methodological Guide}, pp. 313--332.
   London \& New York: Routledge.
@@ -237,6 +263,12 @@ Gl{\o}rstad, H \harvardyearleft 2010\harvardyearright{}.
 \newblock \emph{The structure and history of the {Late Mesolithic} societies in
   the {Oslo} fjord area 6300--3800 {BC}}.
 \newblock Gothenburg: Bricoleur Press.
+
+\harvarditem{Gl{\o}rstad}{2013}{glorstad2013}
+Gl{\o}rstad, H \harvardyearleft 2013\harvardyearright{}.
+\newblock Where are the missing boats? {T}he pioneer settlement of {Norway} as
+  long-term history.
+\newblock \emph{Norwegian Archaeological Review}, 46(1):57--80.
 
 \harvarditem{Harrell}{2015}{harrell2015}
 Harrell, FE \harvardyearleft 2015\harvardyearright{}.
