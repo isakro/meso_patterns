@@ -1,6 +1,6 @@
 # meso_patterns
 
-This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analysis is available in the *gis_output* folder, making it possible to skip straight to the statistical treatment in R. 
+This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analysis is available in *gis_output/*, making it possible to skip straight to the statistical treatment in R. 
 
 ### 1. Repository content (listed in order of analysis)
 
@@ -11,8 +11,8 @@ This repository holds data, code, figures and text files for the paper "Algorith
     │   ├── sediments.gpkg            # Sediment data.
     │   ├── reg_split_north.gpkg      # Polygon for the northern Gunnarsrød region.
     │   ├── reg_split_south.gpkg      # Polygon for the southern Bamble region.
-    │   ├── studyarea                 # Folder holding 10 m resolution DTM tiles for study area.
-    │   ├── region                    # Folder holding 25 m resolution DTM tiles for larger region.
+    │   ├── studyarea                 # Holds 10 m resolution DTM tiles for study area.
+    │   ├── region                    # Holds 25 m resolution DTM tiles for larger region.
     │   └── shoreline 
     │       ├── bamble_curve.csv      # Shoreline displacement curve for Bamble.
     │       ├── gunnarsrod_curve.csv  # Shoreline displacement curve for Gunnarsrød.
@@ -23,15 +23,15 @@ This repository holds data, code, figures and text files for the paper "Algorith
     ├── gis_output
     │   ├── site_data.csv             # Result of GIS analysis for sites.  
     │   └── sample_data.csv           # Result of GIS analysis for random sample locations.
-    │   └── maps                      # Folder with precompiled maps for visualisation.
+    │   └── maps                      # Holds precompiled maps for visualisation.
     ├── r
     │   ├── meso_patterns.Rproj       # RStudio project (open this first when running the script). 
     │   ├── analysis.r                # Main R script.
     │   └── functions
     │       ├── functions.r           # Functions for analysis.r
     │       └── plot_functions.r      # Functions for analysis.r used to unpack and plot results.
-    ├── figures                       # Folder holding all final figures used in the text. 
-    └── latex                         # Folder holding raw article PDF and associated LaTeX files.
+    ├── figures                       # Holds all final figures used in the text. 
+    └── latex                         # Holds raw article PDF and associated LaTeX files.
 
     
 ### 2. GIS and Python
