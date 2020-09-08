@@ -1,4 +1,4 @@
-\begin{thebibliography}{94}
+\begin{thebibliography}{95}
 \providecommand{\natexlab}[1]{#1}
 {\catcode`\|=0\catcode`\#=12\catcode`\@=11\catcode`\\=12
 |immediate|write|@auxout{\expandafter\ifx\csname
@@ -494,6 +494,12 @@ Reitan, G \harvardand{} Persson, P (eds.)  \harvardyearleft
 \newblock \emph{Vestfoldbaneprosjektet--Arkeologiske unders{\o}kelser i
   forbindelse med ny jernbane mellom {Larvik og Porsgrunn}. {B}ind 2}.
 \newblock Oslo: Museum of Cultural History, University of Oslo.
+
+\harvarditem{Ritchie, Hufthammer \harvardand{} Bergsvik}{2016}{ritchie2016}
+Ritchie, K, Hufthammer, AK \harvardand{} Bergsvik, KA \harvardyearleft
+  2016\harvardyearright{}.
+\newblock {Fjord fishing in Mesolithic Western Norway}.
+\newblock \emph{Environmental Archaeology}, 21(4):309--316.
 
 \harvarditem{Rufibach}{2010}{rufibach2010}
 Rufibach, K \harvardyearleft 2010\harvardyearright{}.
