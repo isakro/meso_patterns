@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  9 SEP 2020 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  10 SEP 2020 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,7 +825,7 @@ Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 240.
 NG copy)>] [22 <../figures/mm_hull_fig.png (PNG copy)> <../figures/mm_buff_fig.
 png (PNG copy)>] [23 <../figures/lm_hull_fig.png (PNG copy)> <../figures/lm_buf
 f_fig.png (PNG copy)>] [24]
-<../figures/island_hist.png, id=588, 426.75435pt x 227.53004pt>
+<../figures/island_hist.png, id=587, 426.75435pt x 227.53004pt>
 File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
 Package pdftex.def Info: ../figures/island_hist.png  used on input line 252.
@@ -875,18 +875,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 659FCCD72C8C8FCD28DC06455B5221AB;1177.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 0524AAD482CF8A0D8D0EC9418FADA533;1203
+(rerunfilecheck)             After:  BED75759042D7B053FEEC7A828D3A25A;1198.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
  9029 strings out of 492982
  137413 string characters out of 6134896
- 243594 words of memory out of 5000000
+ 244599 words of memory out of 5000000
  12300 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,2906b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2899b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -899,10 +906,10 @@ sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on main.pdf (39 pages, 71796223 bytes).
+Output written on main.pdf (39 pages, 71796619 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 707 compressed objects within 8 object streams
+ 790 PDF objects out of 1000 (max. 8388607)
+ 705 compressed objects within 8 object streams
  172 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -79,7 +79,8 @@ dt$loc <- as.numeric(dt$loc) - 1
 # Inspect independent variables for correlation (cor |0.8| across all phases 
 # is the defined threshold). Correlation among viewshed, fetch and shoreline
 # emergence variables is problematic for the EM. In addition, some extremely
-# skewed distributions. Colors follow spearmans rho.
+# skewed distributions. Colors follow spearmans rho. The plots are not used 
+# in the paper.
 corr_plot(dt[dt$phase == 'em', !(colnames(dt) %in% 
           c('class', 'phase', 'elev'))],
           'Independent variables - Early Mesolithic') 
@@ -346,13 +347,58 @@ plot_row <- plot_grid(rasterGrob(lm_buff), lm_buff_log, lm_buff_rfp,
 ggsave('../figures/lm_buff_fig.png', width = 30, height = 10,
        units = 'cm', dpi = 600)
 
+# Exploring the relationship between exposure variables
+# Retrieve site data by phase.
+em_expo <- dt[dt$class == 'site' & dt$phase == 'em',]
+mm_expo <- dt[dt$class == 'site' & dt$phase == 'mm',]
+lm_expo <- dt[dt$class == 'site' & dt$phase == 'lm',]
+
+# Retrieve sample data by phase.
+ems_expo <- dt[dt$class == 'hull' & dt$phase == 'em',]
+mms_expo <- dt[dt$class == 'hull' & dt$phase == 'mm',]
+lms_expo <- dt[dt$class == 'hull' & dt$phase == 'lm',]
+
+# Plotting raw site values. Difficult to interpret
+ggplot(em_expo, aes(fetch, view)) + geom_point()
+ggplot(mm_expo, aes(fetch, view)) + geom_point() 
+ggplot(lm_expo, aes(fetch, view)) + geom_point()
+
+# Log-log transformations appear to capture the relationship better.
+# Random samples have a somewhat bimodal distribution with regards to fetch 
+# which is more pronounced further up in time. Sites largely outside
+# the second group of high fetch values. Could this follow from a edge effect?
+# Will require further investigation, but the assumption is that an edge effect
+# would impact sites about the same as the random point locations if their
+# distribution is random with regards to fetch. 
+ggplot() + geom_point(aes(log10(ems_expo$fetch),
+                          log10(ems_expo$view)), colour = 'red') +
+  geom_point(aes(log10(em_expo$fetch), log10(em_expo$view)))+
+  geom_rug(aes(log10(ems_expo$fetch), 
+               log10(ems_expo$view)), colour = 'red')
+
+ggplot() + geom_point(aes(log10(mms_expo$fetch),
+                          log10(mms_expo$view)), colour = 'red') + 
+  geom_point(aes(log10(mm_expo$fetch), log10(mm_expo$view))) +
+  geom_rug(aes(log10(mms_expo$fetch), 
+               log10(mms_expo$view)), colour = 'red')
+
+ggplot() + geom_point(aes(log10(lms_expo$fetch), 
+                          log10(lms_expo$view)), colour = 'red') + 
+  geom_point(aes(log10(lm_expo$fetch), log10(lm_expo$view))) +
+  geom_rug(aes(log10(lms_expo$fetch), 
+               log10(lms_expo$view)), colour = 'red')
+
+# Find correlation to be reported in paper. Non-linear
+# relationship, reporting Spearman's rho instead of Pearson's r.
+cor.test(em_expo$fetch, em_expo$view, method = 'spearman')
+cor.test(mm_expo$fetch, mm_expo$view, method = 'spearman')
+cor.test(lm_expo$fetch, lm_expo$view, method = 'spearman')
+
 # Logistic Regression - Comparison across phases -------------------------------
 
 # First checking the frequencies of samples on islands in the different phases.
 # 0 = island, 1 = mainland
-isls_h <- rbind.data.frame(dt[dt$phase == 'em' & dt$class == 'hull',],
-                           dt[dt$phase == 'mm' & dt$class == 'hull',],
-                           dt[dt$phase == 'lm' & dt$class == 'hull',])
+isls_h <- dt[dt$class == 'hull',]
 isls_h$phase <- factor(isls_h$phase, levels(isls_h$phase)[c(1,3,2)])
 
 # Plot
@@ -369,9 +415,7 @@ hull_isl <- ggplot(isls_h, aes(x = phase, fill = factor(loc,
                     values = c('Island' = '#E69F00', 'Mainland' = '#56B4E9'))
 
 # Retrieve data - Buffer sample
-isls_b <- rbind.data.frame(dt[dt$phase == 'em' & dt$class == 'buff',],
-                           dt[dt$phase == 'mm' & dt$class == 'buff',],
-                           dt[dt$phase == 'lm' & dt$class == 'buff',])
+isls_b <- dt[dt$class == 'buff',]
 isls_b$phase <- factor(isls_b$phase, levels(isls_b$phase)[c(1,3,2)])
 
 # Plot buffer sample data
@@ -388,9 +432,7 @@ buff_isl <- ggplot(isls_b, aes(x = phase, fill = factor(loc,
   scale_fill_manual('legend', values = c('Island' = '#E69F00',
                                          'Mainland' = '#56B4E9')) 
 # Retrieve data - Sites
-isls_sites <- rbind.data.frame(dt[dt$phase == 'em' & dt$class == 'site',],
-                           dt[dt$phase == 'mm' & dt$class == 'site',],
-                           dt[dt$phase == 'lm' & dt$class == 'site',])
+isls_sites <- dt[dt$class == 'site',]
 isls_sites$phase <- factor(isls_sites$phase, levels(isls_sites$phase)[c(1,3,2)])
 
 # Plot site data
