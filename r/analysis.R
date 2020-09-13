@@ -347,53 +347,6 @@ plot_row <- plot_grid(rasterGrob(lm_buff), lm_buff_log, lm_buff_rfp,
 ggsave('../figures/lm_buff_fig.png', width = 30, height = 10,
        units = 'cm', dpi = 600)
 
-# Exploring the relationship between exposure variables
-# Retrieve site data by phase.
-em_expo <- dt[dt$class == 'site' & dt$phase == 'em',]
-mm_expo <- dt[dt$class == 'site' & dt$phase == 'mm',]
-lm_expo <- dt[dt$class == 'site' & dt$phase == 'lm',]
-
-# Retrieve sample data by phase.
-ems_expo <- dt[dt$class == 'hull' & dt$phase == 'em',]
-mms_expo <- dt[dt$class == 'hull' & dt$phase == 'mm',]
-lms_expo <- dt[dt$class == 'hull' & dt$phase == 'lm',]
-
-# Plotting raw site values. Difficult to interpret
-ggplot(em_expo, aes(fetch, view)) + geom_point()
-ggplot(mm_expo, aes(fetch, view)) + geom_point() 
-ggplot(lm_expo, aes(fetch, view)) + geom_point()
-
-# Log-log transformations appear to capture the relationship better.
-# Random samples have a somewhat bimodal distribution with regards to fetch 
-# which is more pronounced further up in time. Sites largely outside
-# the second group of high fetch values. Could this follow from a edge effect?
-# Will require further investigation, but the assumption is that an edge effect
-# would impact sites about the same as the random point locations if their
-# distribution is random with regards to fetch. 
-ggplot() + geom_point(aes(log10(ems_expo$fetch),
-                          log10(ems_expo$view)), colour = 'red') +
-  geom_point(aes(log10(em_expo$fetch), log10(em_expo$view)))+
-  geom_rug(aes(log10(ems_expo$fetch), 
-               log10(ems_expo$view)), colour = 'red')
-
-ggplot() + geom_point(aes(log10(mms_expo$fetch),
-                          log10(mms_expo$view)), colour = 'red') + 
-  geom_point(aes(log10(mm_expo$fetch), log10(mm_expo$view))) +
-  geom_rug(aes(log10(mms_expo$fetch), 
-               log10(mms_expo$view)), colour = 'red')
-
-ggplot() + geom_point(aes(log10(lms_expo$fetch), 
-                          log10(lms_expo$view)), colour = 'red') + 
-  geom_point(aes(log10(lm_expo$fetch), log10(lm_expo$view))) +
-  geom_rug(aes(log10(lms_expo$fetch), 
-               log10(lms_expo$view)), colour = 'red')
-
-# Find correlation to be reported in paper. Non-linear
-# relationship, reporting Spearman's rho instead of Pearson's r.
-cor.test(em_expo$fetch, em_expo$view, method = 'spearman')
-cor.test(mm_expo$fetch, mm_expo$view, method = 'spearman')
-cor.test(lm_expo$fetch, lm_expo$view, method = 'spearman')
-
 # Logistic Regression - Comparison across phases -------------------------------
 
 # First checking the frequencies of samples on islands in the different phases.

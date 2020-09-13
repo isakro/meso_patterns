@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  10 SEP 2020 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  13 SEP 2020 01:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -721,7 +721,7 @@ File: ../figures/fetch.png Graphic file (type png)
 Package pdftex.def Info: ../figures/fetch.png  used on input line 102.
 (pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
  [8 <../figures/fetch.png>] [9]
-<../figures/emergence.png, id=317, 3070.47125pt x 2988.16376pt>
+<../figures/emergence.png, id=319, 3070.47125pt x 2988.16376pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
 Package pdftex.def Info: ../figures/emergence.png  used on input line 116.
@@ -791,32 +791,32 @@ Overfull \hbox (77.61975pt too wide) in paragraph at lines 196--211
 [] [] 
  []
 
-<../figures/em_hull_fig.png, id=545, 853.5087pt x 284.5029pt>
+<../figures/em_hull_fig.png, id=547, 853.5087pt x 284.5029pt>
 File: ../figures/em_hull_fig.png Graphic file (type png)
 <use ../figures/em_hull_fig.png>
 Package pdftex.def Info: ../figures/em_hull_fig.png  used on input line 216.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/em_buff_fig.png, id=546, 853.5087pt x 284.5029pt>
+<../figures/em_buff_fig.png, id=548, 853.5087pt x 284.5029pt>
 File: ../figures/em_buff_fig.png Graphic file (type png)
 <use ../figures/em_buff_fig.png>
 Package pdftex.def Info: ../figures/em_buff_fig.png  used on input line 220.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_hull_fig.png, id=547, 853.5087pt x 284.5029pt>
+<../figures/mm_hull_fig.png, id=549, 853.5087pt x 284.5029pt>
 File: ../figures/mm_hull_fig.png Graphic file (type png)
 <use ../figures/mm_hull_fig.png>
 Package pdftex.def Info: ../figures/mm_hull_fig.png  used on input line 226.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_buff_fig.png, id=548, 853.5087pt x 284.5029pt>
+<../figures/mm_buff_fig.png, id=550, 853.5087pt x 284.5029pt>
 File: ../figures/mm_buff_fig.png Graphic file (type png)
 <use ../figures/mm_buff_fig.png>
 Package pdftex.def Info: ../figures/mm_buff_fig.png  used on input line 230.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/lm_hull_fig.png, id=549, 853.5087pt x 284.5029pt>
+<../figures/lm_hull_fig.png, id=551, 853.5087pt x 284.5029pt>
 File: ../figures/lm_hull_fig.png Graphic file (type png)
 <use ../figures/lm_hull_fig.png>
 Package pdftex.def Info: ../figures/lm_hull_fig.png  used on input line 236.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/lm_buff_fig.png, id=550, 853.5087pt x 284.5029pt>
+<../figures/lm_buff_fig.png, id=552, 853.5087pt x 284.5029pt>
 File: ../figures/lm_buff_fig.png Graphic file (type png)
 <use ../figures/lm_buff_fig.png>
 Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 240.
@@ -824,36 +824,36 @@ Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 240.
 [20] [21 <../figures/em_hull_fig.png (PNG copy)> <../figures/em_buff_fig.png (P
 NG copy)>] [22 <../figures/mm_hull_fig.png (PNG copy)> <../figures/mm_buff_fig.
 png (PNG copy)>] [23 <../figures/lm_hull_fig.png (PNG copy)> <../figures/lm_buf
-f_fig.png (PNG copy)>] [24]
-<../figures/island_hist.png, id=587, 426.75435pt x 227.53004pt>
+f_fig.png (PNG copy)>]
+<../figures/island_hist.png, id=585, 426.75435pt x 227.53004pt>
 File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
 Package pdftex.def Info: ../figures/island_hist.png  used on input line 252.
 (pdftex.def)             Requested size: 292.5pt x 155.95087pt.
- [25 <../figures/island_hist.png (PNG copy)>]
-<../figures/em_mm_fig.png, id=598, 853.5087pt x 284.5029pt>
+ [24]
+<../figures/em_mm_fig.png, id=594, 853.5087pt x 284.5029pt>
 File: ../figures/em_mm_fig.png Graphic file (type png)
 <use ../figures/em_mm_fig.png>
 Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 260.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/em_lm_fig.png, id=599, 853.5087pt x 284.5029pt>
+<../figures/em_lm_fig.png, id=595, 853.5087pt x 284.5029pt>
 File: ../figures/em_lm_fig.png Graphic file (type png)
 <use ../figures/em_lm_fig.png>
 Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 264.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_lm_fig.png, id=600, 853.5087pt x 284.5029pt>
+<../figures/mm_lm_fig.png, id=596, 853.5087pt x 284.5029pt>
 File: ../figures/mm_lm_fig.png Graphic file (type png)
 <use ../figures/mm_lm_fig.png>
 Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 270.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 
 
-Package natbib Warning: Citation `bjeck2009' on page 26 undefined on input line
+Package natbib Warning: Citation `bjeck2009' on page 25 undefined on input line
  276.
 
-[26] [27 <../figures/em_mm_fig.png (PNG copy)> <../figures/em_lm_fig.png (PNG c
-opy)>] [28 <../figures/mm_lm_fig.png (PNG copy)>] [29] (./main.bbl [30]
-[31] [32]
+[25 <../figures/island_hist.png (PNG copy)>] [26 <../figures/em_mm_fig.png (PNG
+ copy)> <../figures/em_lm_fig.png (PNG copy)>] [27 <../figures/mm_lm_fig.png (P
+NG copy)>] [28] [29] (./main.bbl [30] [31] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 243--246
 []\OT1/cmr/m/n/12 Geological Sur-vey of Nor-way, 2015.  \OT1/cmr/m/it/12 Produk
 t-spesi-fikas-jon:
@@ -875,25 +875,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 0524AAD482CF8A0D8D0EC9418FADA533;1203
-(rerunfilecheck)             After:  BED75759042D7B053FEEC7A828D3A25A;1198.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: BED75759042D7B053FEEC7A828D3A25A;1198.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
  9029 strings out of 492982
  137413 string characters out of 6134896
- 244599 words of memory out of 5000000
+ 242599 words of memory out of 5000000
  12300 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,2899b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2897b,622s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -906,10 +899,10 @@ sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on main.pdf (39 pages, 71796619 bytes).
+Output written on main.pdf (39 pages, 71795543 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
- 705 compressed objects within 8 object streams
+ 792 PDF objects out of 1000 (max. 8388607)
+ 707 compressed objects within 8 object streams
  172 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
