@@ -2,7 +2,7 @@
 
 This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analysis is available in *gis_output/*, making it possible to skip straight to the statistical treatment in R. 
 
-### 1. Repository content (listed in order of analysis)
+### 1. Repository contents (listed in order of analysis)
 
     .                   
     ├── gis_data
