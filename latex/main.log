@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  14 SEP 2020 23:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  18 SEP 2020 00:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,7 +685,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `damlien2017' on page 2 undefined on input lin
+e 42.
+
+[2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -720,7 +725,7 @@ File: ../figures/fetch.png Graphic file (type png)
 <use ../figures/fetch.png>
 Package pdftex.def Info: ../figures/fetch.png  used on input line 102.
 (pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
- [8 <../figures/fetch.png>] [9]
+ [8] [9 <../figures/fetch.png>]
 <../figures/emergence.png, id=319, 3070.47125pt x 2988.16376pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
@@ -830,18 +835,18 @@ File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
 Package pdftex.def Info: ../figures/island_hist.png  used on input line 252.
 (pdftex.def)             Requested size: 292.5pt x 155.95087pt.
-<../figures/em_mm_fig.png, id=594, 853.5087pt x 284.5029pt>
+<../figures/em_mm_fig.png, id=595, 853.5087pt x 284.5029pt>
 File: ../figures/em_mm_fig.png Graphic file (type png)
 <use ../figures/em_mm_fig.png>
 Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 260.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/em_lm_fig.png, id=595, 853.5087pt x 284.5029pt>
+<../figures/em_lm_fig.png, id=596, 853.5087pt x 284.5029pt>
 File: ../figures/em_lm_fig.png Graphic file (type png)
 <use ../figures/em_lm_fig.png>
 Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 264.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
  [25 <../figures/island_hist.png (PNG copy)>]
-<../figures/mm_lm_fig.png, id=602, 853.5087pt x 284.5029pt>
+<../figures/mm_lm_fig.png, id=603, 853.5087pt x 284.5029pt>
 File: ../figures/mm_lm_fig.png Graphic file (type png)
 <use ../figures/mm_lm_fig.png>
 Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 270.
@@ -882,20 +887,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D5B548A34A9B94728420322F7E134E82;1204.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 9029 strings out of 492982
- 137413 string characters out of 6134896
- 240903 words of memory out of 5000000
- 12300 multiletter control sequences out of 15000+600000
+ 9030 strings out of 492982
+ 137426 string characters out of 6134896
+ 240902 words of memory out of 5000000
+ 12301 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,2908b,622s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2911b,622s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -908,10 +909,10 @@ sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on main.pdf (39 pages, 71796315 bytes).
+Output written on main.pdf (39 pages, 71796486 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 707 compressed objects within 8 object streams
+ 793 PDF objects out of 1000 (max. 8388607)
+ 708 compressed objects within 8 object streams
  172 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
