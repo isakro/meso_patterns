@@ -1,4 +1,4 @@
-\begin{thebibliography}{95}
+\begin{thebibliography}{98}
 \providecommand{\natexlab}[1]{#1}
 {\catcode`\|=0\catcode`\#=12\catcode`\@=11\catcode`\\=12
 |immediate|write|@auxout{\expandafter\ifx\csname
@@ -13,6 +13,12 @@
 \newblock Noen synspunkt p{\aa} den tidligmesolittiske bosetningen i
   {S{\o}r-Norge}.
 \newblock \emph{Primitive tider}, 16:87--104.
+
+\harvarditem{Bang-Andersen}{2012}{bang2012}
+Bang-Andersen, S \harvardyearleft 2012\harvardyearright{}.
+\newblock Colonizing contrasting landscapes. the pioneer coast settlement and
+  inland utilization in southern {Norway} 10,000--9500 years before present.
+\newblock \emph{Oxford Journal of Archaeology}, 31(2):103--120.
 
 \harvarditem{Baxter}{2003}{baxter2003}
 Baxter, MJ \harvardyearleft 2003\harvardyearright{}.
@@ -59,6 +65,12 @@ Bjerck, HB \harvardyearleft 2008\harvardyearright{}.
 \newblock Norwegian {Mesolithic} trends: A review.
 \newblock In: Bailey, G \harvardand{} Spikins, P (eds.) \emph{Mesolithic
   Europe}, pp. 60--106. Cambridge: Cambridge University Press.
+
+\harvarditem{Bjerck}{2009}{bjerck2009}
+Bjerck, HB \harvardyearleft 2009\harvardyearright{}.
+\newblock {Colonizing seascapes: comparative perspectives on the development of
+  maritime relations in Scandinavia and Patagonia}.
+\newblock \emph{Arctic Anthropology}, 46(1-2):118--131.
 
 \harvarditem{Bjerck}{2017}{bjerck2017}
 Bjerck, HB \harvardyearleft 2017\harvardyearright{}.
@@ -162,6 +174,13 @@ Chatfield, C \harvardyearleft 1995\harvardyearright{}.
 Conolly, J \harvardand{} Lake, M \harvardyearleft 2006\harvardyearright{}.
 \newblock \emph{Geographical Information Systems in Archaeology}.
 \newblock Cambridge: Cambridge University Press.
+
+\harvarditem{Damlien \harvardand{} Solheim}{2017}{damlien2017}
+Damlien, H \harvardand{} Solheim, S \harvardyearleft 2017\harvardyearright{}.
+\newblock {The pioneer settlement of eastern Norway}.
+\newblock In: Blankholm, HP (ed.) \emph{Early Economy and Settlement in
+  Northern Europe. Pioneering, Resource Use, Coping with Change}, pp. 335--367.
+  Sheffield: Equinox Publishing.
 
 \harvarditem{Darmark, Viken \harvardand{} Johannessen}{2018}{darmark2018}
 Darmark, K, Viken, S \harvardand{} Johannessen, LS \harvardyearleft
