@@ -1,6 +1,6 @@
 # meso_patterns
 
-This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analysis is available in *gis_output/*, making it possible to skip straight to the statistical treatment in R. 
+This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analysis is available in the directory *gis_output*, making it possible to skip straight to the statistical treatment in R. 
 
 ### 1. Repository contents (listed in order of analysis)
 
@@ -26,10 +26,10 @@ This repository holds data, code, figures and text files for the paper "Algorith
     │   └── maps                      # Holds precompiled maps for visualisation.
     ├── r
     │   ├── meso_patterns.Rproj       # RStudio project (open this first when running the script). 
-    │   ├── analysis.r                # Main R script.
+    │   ├── analysis.R                # Main R script.
     │   └── functions
-    │       ├── functions.r           # Functions for analysis.r
-    │       └── plot_functions.r      # Functions for analysis.r used to unpack and plot results.
+    │       ├── functions.R           # Functions for analysis.r
+    │       └── plot_functions.R      # Functions for analysis.r used to unpack and plot results.
     ├── figures                       # Holds all final figures used in the text. 
     └── latex                         # Holds raw article PDF and associated LaTeX files.
 
@@ -38,7 +38,7 @@ This repository holds data, code, figures and text files for the paper "Algorith
 All GIS analyses were run in GRASS GIS 7.6.1 (GRASS Development Team 2017) with the v.centerpoint extension on Windows 10. These were run using a Python 2.7 script (Python Software Foundation) with the numpy module (van der Walt et al. 2011). The coordinate system used is WGS84/UTM zone 32N (EPSG:32632). The Python script has to be run from a GRASS mapset with the correct coordinate system (some additional instructions on how to run the script are given at the top of analysis.py which can be opened in a text editor). The script took about 35 days to execute on a laptop computer with an Intel Core i7-8550U 1.8GHz CPU (a crash makes this estimation imprecise). Additionally, QGIS 3.6.3 (QGIS Development Team 2019) and ArcGIS 10.6 (Esri 2018) were used for some of the visualisation.
 
 ### 3. R
-The statistical analyses were run using R 3.6.3 (R Core Team 2020) on Ubuntu 18.04. Additional libraries used were ggplot2 (Wickham 2016), GGally (Schloerke et al. 2018), gridExtra (Auguie 2017), cowplot (Wilke 2019), png (Urbanek 2013), car (Fox & Weisberg 2019), boot (Canty & Ripley 2019; Davison & Hinkley 1997), mice (van Buuren & Groothuis-Oudshoorn 2011), ModelMetrics (Hunt 2018), caret (Kuhn 2019) and randomForest (Liaw & Wiener 2002). The main script is *analysis.r*. This loads functions from *functions.r* and *plot_functions.r*. The complete R script ran in 14.5 hours on a laptop computer with an AMD Ryzen 5 Pro 3500U 2.1GHz CPU. 
+The statistical analyses were run using R 3.6.3 (R Core Team 2020) on Ubuntu 18.04. Additional libraries used were ggplot2 (Wickham 2016), GGally (Schloerke et al. 2018), gridExtra (Auguie 2017), cowplot (Wilke 2019), png (Urbanek 2013), car (Fox & Weisberg 2019), boot (Canty & Ripley 2019; Davison & Hinkley 1997), mice (van Buuren & Groothuis-Oudshoorn 2011), ModelMetrics (Hunt 2018), caret (Kuhn 2019) and randomForest (Liaw & Wiener 2002). The main script is *analysis.R*. This loads functions from *functions.R* and *plot_functions.R*. The complete R script ran in 14.5 hours on a laptop computer with an AMD Ryzen 5 Pro 3500U 2.1GHz CPU. 
 
 ### 4. Data 
 Apart from changing file formats and coordinate systems, as well as reducing the extent of some data, spatial data from other sources are provided in their original form. This is with the exception of *sites.gpkg*. 
