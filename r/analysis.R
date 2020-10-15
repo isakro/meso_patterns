@@ -29,15 +29,15 @@ start <- Sys.time()
 sitdat <- read.csv('../gis_output/site_data.csv')
 sampdat <- read.csv('../gis_output/sample_data.csv')
 
-# Set column 'class' to hold whether site/nonsite, and class of 
-# sample (from hull or buffer constraint).
+# Set column 'class' to hold whether site/non-site, and the class of 
+# the samples (either from the hull or buffer constraint).
 sitdat$class <- 'site'
 sampdat$class[sampdat$sample_type == 'buffer'] <- 'buff'
 sampdat$class[sampdat$sample_type == 'hull'] <- 'hull'
 
 # Transform average aspect to deviation from south (note that the
 # -n flag used with r.slope.aspect in GRASS returns north as
-# 360 instead of the default 90)
+# 360 degrees instead of the default 90)
 sitdat$dev_south <- abs(sitdat$aspect_average - 180)  
 sampdat$dev_south  <- abs(sampdat$aspect_average - 180) 
 
@@ -66,8 +66,8 @@ names(dt)[names(dt) == 'emergence_500'] <- 'emerg_500'
 names(dt)[names(dt) == 'emergence_1k'] <- 'emerg_1k'
 
 # Set infiltration class 5 to NA as this is 'not classified' by the 
-# Geological Survey. Although ordinal, it is left as a numeric variable for
-# correlation plots below. 
+# Geological Survey. Although ordinal, the variable is left as numeric 
+# for correlation plots below. 
 dt$infil[dt$infil == 5] <- NA
 
 # Set island size to 0 in case of NA
@@ -91,7 +91,7 @@ corr_plot(dt[dt$phase == 'mm', !(colnames(dt) %in%
           'Independent variables - Middle Mesolithic')
 
 # Correlations between short distance and longer distance emergence gone in 
-# Late Mesolithic and fetch is just below the 0.8 threshold with viewshed 5km.
+# Late Mesolithic and fetch is just below the 0.8 threshold with view at 5km.
 corr_plot(dt[dt$phase == 'lm', !(colnames(dt) %in% 
           c('class', 'phase', 'elev'))],
           'Independent variables - Late Mesolithic')
@@ -118,7 +118,7 @@ dt$infil <- factor(dt$infil, order = TRUE, levels = c(1, 2, 3, 4))
 
 # Log transform the skewed variables. Having gone through alternatives, log
 # transform seemed most reasonable. 0s are causing trouble for island size,
-# so this is treated seperately below
+# so this is treated separately below
 cols <- c('view', 'fetch', 'emerg_shdist', 'emerg_lgdist')
 dt_log <- log(dt[cols])
 colnames(dt_log) <- paste('log', colnames(dt_log), sep = '_')
@@ -134,12 +134,12 @@ names(dt_log)[names(dt_log) == 'isl_si'] <- 'log_isl_si'
 
 # A few randomly generated points are situated at elevations without
 # any surrounding emergence values. These are given NA instead of 0.
-# Another option would have been to retain these as zero, but would 
-# caused issues for log transform as with the island size variable above.
+# Another option would have been to retain these as zero, but this would 
+# cause issues for log transform as with the island size variable above.
 dt_log$log_emerg_shdist[dt_log$log_emerg_shdist == '-Inf'] <- NA
 dt_log$log_emerg_lgdist[dt_log$log_emerg_lgdist == '-Inf'] <- NA
 
-#  Transform continous variables to take on values between 0 and 1
+#  Transform continuous variables to take on values between 0 and 1
 dt_log[,c('log_isl_si','dev_south', 'log_view', 'log_fetch',
           'log_emerg_shdist','log_emerg_lgdist')] <- 
             as.data.frame(apply(dt_log[,c('log_isl_si','dev_south', 'log_view',
@@ -151,7 +151,7 @@ dt_log[,c('log_isl_si','dev_south', 'log_view', 'log_fetch',
 # using averages as rfImpute() does).
 dt_log$infil <- as.numeric(as.character(dt_log$infil))
 
-# Logistc regression - Sites/non-sites ---------------------------------
+# Logistic regression - Sites/non-sites ---------------------------------
 
 # Number of bootstrap samples
 boot_n <- 9999
@@ -390,7 +390,7 @@ isls_sites$phase <- factor(isls_sites$phase, levels(isls_sites$phase)[c(1,3,2)])
 
 # Plot site data
 sites_isl <- ggplot(isls_sites, aes(x = phase, fill = factor(loc,
-                                                        labels = c('Island', 'Mainland')))) +
+                          labels = c('Island', 'Mainland')))) +
   geom_bar(position = 'dodge', alpha = 0.5, colour = 'black') + 
   theme_classic() +
   theme(legend.title = element_blank()) +
@@ -447,7 +447,7 @@ lm_p$phase <- 'lm'
 # Combine the datasets
 p_dat <- rbind(em_p, mm_p, lm_p)
 
-# Reorder
+# Reorder columns
 p_dat <- p_dat[,c("phase", "loc", "log_isl_si",
                   "infil", "dev_south", "elev", "log_fetch",
                   "log_view", "log_emerg_shdist", "log_emerg_lgdist")] 

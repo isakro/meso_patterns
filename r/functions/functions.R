@@ -5,7 +5,7 @@ imp_nest_rf <- function(input_data, nimp, ntrees,
   results <- list()
   
   # If island variables are specified as the predictors, pass those on with the 
-  # dependent on to nested cv.  
+  # dependent to nested cv.  
   if(!(is.null(indep))){
     rf <- nestcv_func(input_data[, names(input_data) %in% c(depend, indep)],
                       ntrees, depend, nindep)
@@ -33,7 +33,7 @@ imp_nest_rf <- function(input_data, nimp, ntrees,
 }
 }
 
-# Function to measure Brier and AUC scores accross cross-validation folds 
+# Function to measure Brier and AUC scores across cross-validation folds 
 # by passing this to the summaryFunction parameter of carets trainControl().
 # (partly repurposed from print(twoClassSummary))
 summary_func <- function(data, lev = NULL, model = NULL) {

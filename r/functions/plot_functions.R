@@ -1,6 +1,6 @@
 ##### Functions used for correlation plot #####
 
-# Historgram function to show univariate distribution
+# Histogram function to show univariate distribution
 hist_func <- function(data, mapping, ...) {
   ggplot(data = data, mapping = mapping) +
     geom_histogram() +
@@ -8,7 +8,7 @@ hist_func <- function(data, mapping, ...) {
 }
 
 # Function to retrieve correlation
-# and color according to spearmans rho
+# and color according to spearman's rho
 cor_func <- function(data, mapping, ...){
   
   # Retrieve data
@@ -60,7 +60,7 @@ corr_plot <- function(data, title, ...){
                 panel.grid.minor = element_blank())
 }
 
-##### Functions for percentile boxplot for bootstraped coefficients #####
+##### Functions for percentile boxplot for bootstrapped coefficients #####
 percentil_func <- function(x) {
   r <- quantile(x, probs = c(0.025, 0.25, 0.5, 0.75, 0.975))
   names(r) <- c("ymin", "lower", "middle", "upper", "ymax")
