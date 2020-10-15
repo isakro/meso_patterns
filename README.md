@@ -1,6 +1,6 @@
 # meso_patterns
 
-This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analysis is available in the directory *gis_output*, making it possible to skip straight to the statistical treatment in R. 
+This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analyses is available in the directory *gis_output*, making it possible to skip straight to the statistical treatment in R. See section 5 below for licenses associated with the contents of the repository.
 
 ### 1. Repository contents (listed in order of analysis)
 
