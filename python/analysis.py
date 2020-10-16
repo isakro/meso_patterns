@@ -1,10 +1,12 @@
 # Python 2.7 script to be exectued from the Python shell in a GRASS GIS
-# mapset set to coordinate system WGS84/UTM zone 32N (EPSG:32632). The Python
+# mapset set to the coordinate system WGS84/UTM zone 32N (EPSG:32632). The Python
 # module 'numpy' has to be installed and the 'v.centerpoint' add-on has to be
 # installed to GRASS GIS.
 
-# Set the working directory to the location of this file and execute the script
-# by running the following code from from the Python shell in GRASS GIS:
+# In the Python shell in GRASS GIS, set the working directory to the location of 
+# this file and execute the script. This can be done by inserting the local file 
+# path in the os.chdir() function that is called in the commented out code below, 
+# and running the code in the shell:
 
 # import os
 # os.chdir([insert local filepath]/analysis.py')
@@ -18,18 +20,18 @@ import numpy as np
 from numpy import genfromtxt
 from datetime import datetime
 
-# Time script
+# Used to time the script.
 startTime = datetime.now()
 
-# Map layers required (these are imported below the definition of functions)
+# Map layers required (these are imported below the definition of functions).
 studyDtm = "studyarea" 
 regionDtm = "region"
 sites = "sites"
 lakes =  "lakes"
 sediments = "sediments" 
 
-# Polygons splitting region along border between bamble and porsgrunn. 
-# Used in the sampleByPhase() and emergence() functions, defined below.
+# Polygons splitting region along the border between bamble and porsgrunn. 
+# These are used in the sampleByPhase() and emergence() functions, defined below.
 splitSouth = "reg_split_south"
 splitNorth = "reg_split_north"
 
@@ -45,15 +47,15 @@ recodeGunnarsrod = os.path.join(os.getcwd(),
 nInterval = 48
 
 # Sets the r.viewshed parameters 'maximum viewing distance'
-# and 'observerer elevation' for computeViewshed().
+# and 'observerer elevation' for computeViewshed(), defined below.
 maxDistance = '10000'
 obsElev = '1.6'
 
-# The size of the buffer to create around sites for sampling assumed non-sites
+# The size of the buffer to create around sites for sampling assumed non-sites.
 bufferDist = '500'
 
 # The number of random samples generated for each phase for
-# each of the two sampling frames
+# each of the two sampling frames.
 nSample = '1000'
 
 ########################### Defintion of functions ############################
@@ -312,8 +314,8 @@ def getPtData(pointFeature, minElev, centElevCol, xCoord, yCoord):
     return(pointData)
 
 # Function to retrieve data on polygon features. Follows the same structure as 
-# getPtData above, except minimum elevation is only retrieved if it is provided
-#  as an argument. This is because the polygon cats need to retrieved before 
+# getPtData() above, except minimum elevation is only retrieved if it is given
+# as an argument. This is because the polygon cats need to retrieved before 
 # min elevation has been found for the buffers of the random samples.
 def getPolyData(polyFeature, minElev = None):
     polyData = grass.read_command("v.db.select", map = polyFeature)
@@ -344,9 +346,12 @@ def getPolyData(polyFeature, minElev = None):
 
 # Utility function to identify sites consisting of multiple polygons, 
 # create a centerpoint from these, delete the polygons in the old layer,
-# and reinsert the point in their place. Here this only pertains to Askeladden
-# ID 236024. This was defined by the field archaeologists as one site broken up
-# by a quarry, hence the multiple polygons.
+# and reinsert the point in their place. See: 
+# https://gis.stackexchange.com/questions/330184/replacing-multiple-polygon
+# -features-by-their-shared-center-point-in-grass-gis 
+# Here this only pertains to Askeladden ID 236024. This was defined by the 
+# archaeologists in the field as one site broken up by a quarry, hence the 
+# multiple polygons.
 def cleanMultiFeatures(vector, outputVect):
     cats1 = []
     cats2 = []
@@ -359,7 +364,7 @@ def cleanMultiFeatures(vector, outputVect):
         cats1.append(row.split('|')[0])
 
     # Retrieve cats by area.
-    # This returns cats for multi polygon features as well. 
+    # This returns cats for multi-polygon features as well. 
     cats = grass.read_command('v.report', map = vector, option = 'area')
     catsByRow = cats.split('\n')
     for row in catsByRow:
@@ -521,7 +526,7 @@ def computeViewshed(pointFeature, pointData, dtmMap, maxDist, obsElev):
         viewsize5k = viewReport.split('\n')[1]
         
         # Update the columns of the input pointFeature with the viewshed values
-        # (these columns have to be defined beforehand)
+        # (these columns have to already exist in the attribute table)
         grass.run_command('v.db.update', map = pointFeature, layer = '1', 
                             column = 'viewsize_5k', value = viewsize5k, 
                             where = 'cat = ' + pointCat)
@@ -546,12 +551,12 @@ def diagonal(regionRaster):
      if line.split('=')[0] == 'nsres':
       res = float(line.split('=')[1])
       
-    # Finds the length of the diagonal in map units
+    # Finds the length of the diagonal in map units.
     diag = math.sqrt(rows**2 + cols**2)*res
     return(diag)
 
 # Function to estimate average fetch from a point, 
-# using two rasters (studyarea and larger region)       
+# using two rasters (studyarea and larger region).       
 def computeFetch(pointFeature, pointData, mapMax,
                  dtmMap, regionVect, nIntervals):
     
@@ -565,27 +570,27 @@ def computeFetch(pointFeature, pointData, mapMax,
         pointY = str(point[4])
 
         # Make sure that the resolution and comp region are correct
-        # for sea level change
+        # for sea level change.
         grass.run_command('g.region', vector = regionVect)
         
         # Raise the sealevel to the point, rounded up to make sure the point
         # ends up in the sea. This is necessary for the subsequent clipping
-        # to work. If there already exists a sea vector at a points elevation,
-        # this is simply reused
+        # to work. If there already exists a sea vector at a point's elevation,
+        # this is reused.
         seaVect = 'seavect_' + str(int(math.ceil(float(point[2]))))
         if math.ceil(float(point[2])) not in elev:
-            # Create binary representation of sealevel
+            # Create binary representation of sealevel.
             seaBin = 'sea_bin_' + str(int(math.ceil(float(point[2]))))
             grass.mapcalc(seaBin + ' = if(' + dtmMap +' < ' +
                              str(math.ceil(float(point[2]))) +
                              ', 1, null())', overwrite = True)
 
-            # Vectorise the binary sea raster
+            # Vectorise the binary sea raster.
             grass.run_command('r.to.vect', overwrite = True, input = seaBin,
                                  output = seaVect, type = 'area')
             elev.append(math.ceil(float(point[2])))
         
-        # Create buffer around point 
+        # Create buffer around point. 
         polyBuffer = "temp_buffer"
         lineBuffer = "temp_buffer_line"
         grass.run_command('v.buffer', overwrite = True, input = pointFeature,
@@ -593,25 +598,25 @@ def computeFetch(pointFeature, pointData, mapMax,
                             distance = mapMax)
         
         # Adds table to the vector database and establishes
-        # connection (required for next step)
+        # connection (required for next step).
         grass.run_command('v.db.addtable', map = polyBuffer)
         
-        # Converts the border of the polygon buffer to a line
+        # Converts the border of the polygon buffer to a line.
         grass.run_command('v.to.lines', overwrite = True, input = polyBuffer,
                              output = lineBuffer)
      
-        # Finds the length of the line buffer
+        # Finds the length of the line buffer.
         bufferReport = grass.read_command('v.report', map = lineBuffer,
                                              option = 'length')
         bReportByLine = bufferReport.split('\n')
         bufferLength = float(bReportByLine[1].split('|')[1])
 
-        # Finds the required distance between end-points of each radian
+        # Finds the required distance between end-points of each radian.
         deg = bufferLength / 360
         distInterval = deg * degInterval
 
         # Creates a text document to hold the rules to be used in
-        # v.segment below
+        # v.segment below.
         dist = 0.0
         segRules = 'segment_rules.txt'
         f = open(segRules, 'w+')
@@ -620,19 +625,19 @@ def computeFetch(pointFeature, pointData, mapMax,
             dist = dist + distInterval
         f.close()
 
-        # Create end-point every n degree along line buffer:
+        # Create end-point every n degree along line buffer.
         circPts = "temp_segment"
         grass.run_command('v.segment', overwrite = True, input = lineBuffer,
                              output = circPts, rules = segRules)
      
-        # Retrieve the coordinates for end-points
+        # Retrieve the coordinates for end-points.
         radialPtsReport = grass.read_command('v.report', map = circPts,
                                                 option = 'coor')
         radialReportByLine = radialPtsReport.split('\n')
         nPts = len(radialReportByLine) - 2
 
         # Set up ascii text document to create radial lines
-        # between central point and end-points
+        # between central point and end-points.
         radialsTxt = 'radials_rules.txt'
         f = open(radialsTxt, 'w+')
         for pt in range(1, nPts + 1):
@@ -642,7 +647,7 @@ def computeFetch(pointFeature, pointData, mapMax,
                  (pointX, pointY, xCoord, yCoord, pt))
         f.close()
 
-        # Create radials from central point to end-points
+        # Create radials from central point to end-points.
         radials = "temp_radials"
         grass.run_command('v.edit', overwrite = True, map = radials,
                             tool = 'create')
@@ -650,20 +655,22 @@ def computeFetch(pointFeature, pointData, mapMax,
                             input = radialsTxt)
 
         # Clip radials by the vector representing the 
-        # sea in the study region
+        # sea in the study region.
         radialsClipped1 = 'temp_radials_clipped1'
         grass.run_command('v.clip', overwrite = True, input = radials,
                             clip = seaVect, output = radialsClipped1)
         
         # Clip radials by the vector representing the the modern day
-        # coastline in the larger region
+        # coastline in the larger region.
         radialsClipped = "temp_radials_clipped"
         grass.run_command('v.clip', overwrite = True, input = radialsClipped1,
                             clip = regionVect, output = radialsClipped)
         
         # Retrieve lines that are intersecting the point after being clipped.
-        # (v.select seems to have an issue with rounding error, causing it to
-        # miss some of the lines intersecting the point)
+        # v.select seems to have an issue with rounding error, causing it to
+        # miss some of the lines intersecting the point, see 
+        # https://gis.stackexchange.com/questions/325823/retrieving-lines
+        # -radiating-from-point-with-v-select-in-grass-gis-7-6
         fetchLines = 'fetch_lines_' + pointCat
         radialsIds = grass.read_command('v.edit', map = radialsClipped,
                                           type = 'line', tool = 'select', 
@@ -674,7 +681,7 @@ def computeFetch(pointFeature, pointData, mapMax,
                             tool = 'copy', ids = radialsIds,
                             bgmap = radialsClipped)
 
-        # Find the mean length of the fetch lines
+        # Find the mean length of the fetch lines.
         fetchReport = grass.read_command('v.report', map = fetchLines,
                         option = 'length')
         fetchByLine = fetchReport.split('\n')
@@ -684,19 +691,18 @@ def computeFetch(pointFeature, pointData, mapMax,
             fetchLengths.append(float(fetchByLine[line].split('|')[1]))
         avgFetch = sum(fetchLengths)/len(fetchLengths)
 
-        # Update the point feature layer 
-        # (column avg_fetch has to already exist)
+        # Update the point feature layer (column avg_fetch has to already exist).
         grass.run_command('v.db.update', map = pointFeature, layer = '1', 
                             column = 'avg_fetch', value = avgFetch, 
                             where = 'cat = ' + pointCat)
     
-    # Reset computational region
+    # Reset computational region.
     grass.run_command('g.region', raster = studyDtm)
 
-# Function to identify if point is on island (y/n), and if so of what size
+# Function to identify if point is on island (y/n), and if so of what size.
 def location(pointFeature, pointData, dtmMap):
 
-    # Create column to hold island size
+    # Create column to hold island size.
     grass.run_command('v.db.addcolumn', map = pointFeature,
                           columns = ['location character(20)',
                                      'island_size double precision'])
@@ -708,7 +714,7 @@ def location(pointFeature, pointData, dtmMap):
     grass.run_command('v.in.region', output = 'dtm_edge', type = 'line',
                       overwrite = True)
 
-    # Loop over points
+    # Loop over points.
     for point in pointData:
         pointCat = str(point[0])
 
@@ -717,23 +723,23 @@ def location(pointFeature, pointData, dtmMap):
         grass.run_command('v.extract', flags = 'd', overwrite = True,
                   input = pointFeature, cats = pointCat, output = 'temp_pt')
         
-        # Raise the sealevel to the point
+        # Raise the sealevel to the point.
         grass.mapcalc('temp_sealevel' + ' = if(' + dtmMap +' < ' +  
             str(math.floor(float(point[2]))) + ', null(), 1)', overwrite = True)
 
-        # Vectorise the elevation raster
+        # Vectorise the elevation raster.
         seaVect = 'temp_seavect_' + pointCat
         grass.run_command('r.to.vect', overwrite = True,
                           input = 'temp_sealevel',
                           output = seaVect, type = 'area')
         
-        # Add a column to hold area and find area of each polygon in the vector
+        # Add a column to hold area and find area of each polygon in the vector.
         grass.run_command('v.db.addcolumn', map = seaVect,
                           columns = 'area double precision')
         grass.run_command('v.to.db', map = seaVect, column = 'area',
                           option = 'area')
 
-        # Add column to hold polygon type and assign 'island' to all polygons
+        # Add column to hold polygon type and assign 'island' to all polygons.
         grass.run_command('v.db.addcolumn', map = seaVect,
                           columns = 'class character(20)')
         grass.run_command('v.db.update', map = seaVect,
@@ -749,7 +755,7 @@ def location(pointFeature, pointData, dtmMap):
         mainData = grass.read_command("v.db.select", map = 'temp_mainland')
         mainDataByLine = mainData.split('\n')
 
-        # Retrieve categories for each mainland polygon
+        # Retrieve categories for each mainland polygon.
         mainCats = []
         for poly in mainDataByLine[1:-1]:
             cat = poly.split('|')[0]
@@ -762,7 +768,7 @@ def location(pointFeature, pointData, dtmMap):
 
         # Manual inspection at various sea levels indicates that no island is
         # ever larger than around 13.000 hectares, and that the smallest part 
-        # of the mainland ever reaching into the sampling region is ever 
+        # of the mainland ever reaching into the sampling region is always 
         # smaller than around 50.000 hectares. All polygons larger than 20.000
         # were consequently coded 'mainland'.
         grass.run_command('v.db.update', map = seaVect, column = 'class',
@@ -773,7 +779,7 @@ def location(pointFeature, pointData, dtmMap):
                           column = 'location', query_map = seaVect,
                           query_column = 'class')
 
-        # Retrieve location category from temporary point
+        # Retrieve location category from temporary point.
         islandLocation = grass.read_command('v.db.select', map = 'temp_pt',  
                                             columns = 'location')
 
@@ -782,11 +788,11 @@ def location(pointFeature, pointData, dtmMap):
                           column = 'island_size', query_map = seaVect,
                           query_column = 'area')
 
-        # Retrieve polygon size from temporary point
+        # Retrieve polygon size from temporary point.
         islandSize = grass.read_command('v.db.select', map = 'temp_pt',  
                                             columns = 'island_size')
 
-        # Update the original point feature with the values
+        # Update the original point feature with the values.
         grass.run_command('v.db.update', map = pointFeature, layer = '1', 
                           column = 'location',
                           value = islandLocation.split('\n')[1], 
@@ -900,7 +906,7 @@ def emergence(polyFeature, polyData, emergeRaster, dtmMap):
                 grass.run_command('r.mask', flags = 'r')
 
 ################################# Main script ##################################
-# Import the necessary layers to the mapset
+# Import the necessary layers to the mapset.
 grass.run_command('v.import',
                   input = os.path.join(os.path.dirname(os.getcwd()),
                                     'gis_data', sites + '.gpkg'),
@@ -926,7 +932,7 @@ grass.run_command('v.import',
 # purposes. These therefore first have to be loaded in and then merged.
 
 # Retrieve name of all studyarea DTM tiles (skip files not
-# ending in .tif)
+# ending in .tif).
 study_dtms = []
 for file in os.listdir(os.path.join(os.path.dirname(os.getcwd()),
                                     'gis_data\studyarea')):
@@ -934,7 +940,7 @@ for file in os.listdir(os.path.join(os.path.dirname(os.getcwd()),
         study_dtms.append(file)
 
 # Loop over and import each of these.
-# study_names is to hold the name of each raster tile
+# study_names is to hold the name of each raster tile.
 study_names = []
 for i, n in enumerate(study_dtms, start=1):
     grass.run_command('r.import',
@@ -947,7 +953,7 @@ for i, n in enumerate(study_dtms, start=1):
 grass.run_command('g.region', raster = ','.join(study_names))
 
 # Combine these into one with r.patch, setting the output to
-# studyDtm as defined at the start of the script
+# studyDtm as defined at the start of the script.
 grass.run_command('r.patch', input = ','.join(study_names),
                   output = studyDtm, overwrite = True)
 
@@ -987,14 +993,14 @@ grass.run_command('v.what.rast', flags = 'i', map = sites, raster = studyDtm,
                   where = 'elev_minimum ISNULL')
 
 # Extract sites with adequate quality level for further 
-# analysis.
+# analysis (see the paper for more on this).
 sitesTmp = 'sites_tmp'
 quality = 3
 grass.run_command('v.extract', overwrite = True,
                   input = sites, where = 'quality <= ' +
                   str(quality), output = sitesTmp)
 
-# Add column to hold chronological phase
+# Add column to hold chronological phase.
 grass.run_command('v.db.addcolumn', map = sitesTmp,
                     columns = ['phase varchar(15)'])
 
@@ -1027,21 +1033,21 @@ elevDat = grass.read_command('v.db.select', map = sitesTmp,
 elevByRow = elevDat.split('\n')
 for row in elevByRow[1:-1]:
 
-    # Find shoreline date
+    # Find shoreline date.
     sdate = np.interp(row.split('|')[4],
                       list(reversed(meany.reshape(-1).tolist())),
                       list(reversed(calYears)))
     
-    # Check what phase this corresponds to in the look-up
+    # Check what phase this corresponds to in the look-up.
     phase = phases[bisect.bisect_right(phases, (sdate,))][1]
 
-    # And update the record
+    # And update the record.
     grass.run_command('v.db.update', map = sitesTmp, layer = '1', 
                     column = 'phase', value = phase, 
                     where = 'cat = ' + row.split('|')[0])
     
 # Repeat above steps for sites in Gunnarsrod area
-# (Porsgrunn and Larvik municipalities)
+# (Porsgrunn and Larvik municipalities).
 gunnarsrod = genfromtxt('../gis_data/shoreline/gunnarsrod_curve.csv',
                         delimiter = ',', names = True)
 gunnarsrod['upperx'] = (gunnarsrod['upperx'] - 1950) * -1
@@ -1065,7 +1071,7 @@ for row in sitByRow[1:-1]:
                     where = 'cat = ' + row.split('|')[0])
     
 # Exclude sites with a shoreline date outside the desired range
-# (ascribed NULL to phase)
+# (ascribed NULL to phase).
 sitesQu = 'sites_q' + str(quality)
 grass.run_command('v.extract', input = sitesTmp, overwrite = True,
                   where = "phase != 'NULL'", output = sitesQu)
@@ -1081,7 +1087,7 @@ grass.run_command('v.rast.stats', flags = 'c', map = sitesQu, raster = slopeMap,
                   column_prefix = 'slope', method = 'average')
 
 # Find average slope for the remaining sites (site polygons not hitting center 
-# of raster cells, see elevation above).
+# of raster cells, see the step for finding elevation above).
 grass.run_command('v.what.rast', flags = 'i', map = sitesQu, raster = slopeMap,
                   type = 'centroid', column = 'slope_average', 
                   where = 'slope_average ISNULL')
@@ -1139,7 +1145,7 @@ grass.run_command('r.mask', overwrite = True, vector = splitNorth)
 grass.run_command('r.recode', input = dtmSea, output = 'temp_north',
                  rules = recodeGunnarsrod, overwrite = True)
 
-# Mask by present day lakes, where there is no depth data, and patch the two
+# Mask by present day lakes (where there is no depth data), and patch the two
 # rasters. The i flag indicates inverse mask.
 grass.run_command('r.mask', overwrite = True, flags = 'i', vector = lakes)
 emergeMap = 'emerg'
@@ -1161,18 +1167,18 @@ sampleMm = sampleByPhase('mm', sitesQu, splitSouth,
 sampleLm = sampleByPhase('lm', sitesQu, splitSouth,
                          splitNorth, studyDtm, nSample)
 
-# Combine these into one vector feature
+# Combine these into one vector feature.
 samplePts = 'sample_pts'
 grass.run_command('v.patch', overwrite = True, flags = 'e', input = sampleEm +
                 ',' + sampleMm + ',' + sampleLm, output = samplePts)
 
-# Find the size of sites 
+# Find the size of sites.
 grass.run_command('v.db.addcolumn', map = sitesQu,
                   columns = ['site_size double precision'])
 grass.run_command('v.to.db', map = sitesQu, option = 'area',
                  columns = 'site_size')
 
-# Use median site size to determine buffer size for random points
+# Use median site size to determine the buffer size for random points.
 sizeData = grass.read_command('v.univar', flags = 'ge', map = sitesQu,
                             column = 'site_size')
 sizeDataByRow = sizeData.split('\n')
@@ -1184,7 +1190,7 @@ grass.run_command('v.buffer', flags = 't', input = samplePts,
                  overwrite = True, output = sampleBuffers,
                  distance = sampleDist)
                             
-# Add columns to sample buffers to hold data to be retrieved
+# Add columns to sample buffers to hold data to be retrieved.
 grass.run_command('v.db.addcolumn', map = sampleBuffers,
                    columns = ['elev_minimum double precision', 
                               'aspect_average double precision',
@@ -1203,40 +1209,40 @@ samplesPolyData = getPolyData(sampleBuffers)
 # site data does not overlap).
 for polyCat in samplesPolyData:
                             
-      # Extract sample buffer
+      # Extract sample buffer.
       grass.run_command('v.extract', flags = 'd', overwrite = True,
                 input = sampleBuffers, cats = polyCat,
                         output = 'temp_feature')
                             
-      # Find the lowest elevation for sample buffer (to be used with viewshed)
+      # Find the lowest elevation for sample buffer (to be used with viewshed).
       grass.run_command('v.rast.stats', flags = 'c', map = 'temp_feature',
                         raster = studyDtm, column_prefix = 'elev',
                         method = 'minimum')
                             
-      # Find average aspect for random sample buffers
+      # Find average aspect for random sample buffers.
       grass.run_command('v.rast.stats', flags = 'c', map = 'temp_feature',
                         raster = aspectMap, column_prefix = 'aspect',
                         method = 'average')
                             
-      # Extract the values                    
+      # Extract the values.                    
       values = grass.read_command('v.db.select', 
                          map = 'temp_feature',  
                          columns = 'elev_minimum,aspect_average',  
                          where = 'cat = ' + polyCat)
                             
-      # Update the sampleBuffers feature with the elevation value                 
+      # Update the sampleBuffers feature with the elevation value.                 
       grass.run_command('v.db.update', map = sampleBuffers, layer = '1',
                                 column = 'elev_minimum',
                                 value = values.split('\n')[1].split('|')[0],
                                 where = 'cat = ' + polyCat)
 
-      # Update the sampleBuffers feature with the aspect value                    
+      # Update the sampleBuffers feature with the aspect value.                    
       grass.run_command('v.db.update', map = sampleBuffers, layer = '1',
                                 column = 'aspect_average',
                                 value = values.split('\n')[1].split('|')[1],
                                 where = 'cat = ' + polyCat)
 
-# Get sample buffer data, now with elevation data
+# Get sample buffer data, now with elevation data.
 samplesPolyData = getPolyData(sampleBuffers, 'elev_minimum')
 
 # As this was much slower, the sedimentMode() function identifies and only 
@@ -1248,11 +1254,11 @@ sedimentMode(sedInfilRast, 'infiltration', sampleBuffers, samplesPolyData)
 # extract each individual polygon).
 emergence(sampleBuffers, samplesPolyData, emergeMap, studyDtm)
 
-# Copy the data retrieved with the sample buffers back to the sample points
+# Copy the data retrieved with the sample buffers back to the sample points.
 grass.run_command('db.copy', overwrite = True, from_table = sampleBuffers, 
                 to_table = samplePts)
 
-# Finds the elevation of each sample point (to be used with functions below)
+# Finds the elevation of each sample point (to be used with functions below).
 grass.run_command('v.what.rast', map = samplePts, raster = studyDtm,
                   type = 'point', column = 'cent_elev')
 
@@ -1261,7 +1267,7 @@ grass.run_command('v.what.rast', map = samplePts, raster = studyDtm,
 # these with the single point.
 sitesClean = cleanMultiFeatures(sitesQu, "sites_clean")
 
-# Finds the average coordinate point for the rest of the sites
+# Finds the average coordinate point for the rest of the sites.
 siteCentPts = 'site_cent_pts'
 grass.run_command('v.extract', overwrite = True, input = sitesClean,
                  output = 'temp_centroids')
@@ -1269,7 +1275,7 @@ grass.run_command('v.type', overwrite = True, input = 'temp_centroids',
                  output = siteCentPts, from_type = 'centroid', 
                  to_type = 'point')
 
-# Finds the elevation of each site center point 
+# Finds the elevation of each site center point. 
 grass.run_command('v.what.rast', map = siteCentPts, raster = studyDtm,
                   type = 'point', column = 'cent_elev')
 
@@ -1278,7 +1284,7 @@ grass.run_command('v.what.rast', map = siteCentPts, raster = studyDtm,
 # to not loose resolution in manipulation of study region raster.
 grass.run_command('g.region', raster = regionDtm, res = '10')
 
-# Create raster of larger region that holds null in the smaller study area
+# Create raster of larger region that holds null in the smaller study area.
 grass.mapcalc('temp_zero = ' + studyDtm + '* 0', overwrite = True)
 grass.mapcalc('temp_zero_null = if(isnull(temp_zero), 1, 0)', overwrite = True)
 grass.mapcalc('temp_region_zero = ' + regionDtm + '/ temp_zero_null',
@@ -1293,8 +1299,7 @@ grass.mapcalc(dtmExp + ' = if(isnull(temp_region_zero),' + studyDtm + ', 0)',
              overwrite = True)
              
 # Sets up the larger regional raster and subsequent regional sea vector to be
-# empty in the study area to only clip fetch lines that escape the 
-# studyarea.
+# empty in the study area to only clip fetch lines that escape the studyarea.
 lregion = 'lregion'
 grass.mapcalc(lregion + ' = if(isnull(temp_region_zero), 0,' + regionDtm + ')',
              overwrite = True)
@@ -1336,11 +1341,11 @@ maxDist = diagonal(regionDtm)
 computeFetch(siteCentPts, siteData, maxDist, dtmExp, regSeaVect, nInterval)
 computeFetch(samplePts, sampleData, maxDist, dtmExp, regSeaVect, nInterval)
 
-# Export attribute tables as csv files
+# Export attribute tables as csv files.
 grass.run_command('db.out.ogr', overwrite = True, input = siteCentPts,
                   output = '../gis_output/site_data.csv')
 grass.run_command('db.out.ogr', overwrite = True, input = samplePts,
                   output = '../gis_output/sample_data.csv')
 
-# Print the time it took to execute the script
+# Print the time it took to execute the script.
 print datetime.now() - startTime
