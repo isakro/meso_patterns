@@ -8,16 +8,16 @@ Warning--empty journal in parr2018
 Warning--missing institution in sorensen2015
 You've used 98 entries,
             3218 wiz_defined-function locations,
-            1220 strings with 24355 characters,
-and the built_in function-call counts, 68109 in all, are:
-= -- 5504
+            1221 strings with 24398 characters,
+and the built_in function-call counts, 68123 in all, are:
+= -- 5507
 > -- 3183
 < -- 33
 + -- 1164
 - -- 1042
-* -- 4737
-:= -- 11039
-add.period$ -- 325
+* -- 4739
+:= -- 11042
+add.period$ -- 326
 call.type$ -- 98
 change.case$ -- 758
 chr.to.int$ -- 114
@@ -25,13 +25,13 @@ cite$ -- 100
 duplicate$ -- 4791
 empty$ -- 5116
 format.name$ -- 1282
-if$ -- 13346
+if$ -- 13349
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 940
-newline$ -- 504
+newline$ -- 505
 num.names$ -- 543
-pop$ -- 2071
+pop$ -- 2070
 preamble$ -- 1
 purify$ -- 606
 quote$ -- 0
@@ -46,5 +46,5 @@ type$ -- 1108
 warning$ -- 2
 while$ -- 692
 width$ -- 0
-write$ -- 1314
+write$ -- 1316
 (There were 2 warnings)
