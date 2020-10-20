@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  19 OCT 2020 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  21 OCT 2020 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,7 +697,7 @@ Overfull \hbox (0.70047pt too wide) in paragraph at lines 52--69
  [] 
  []
 
-<../figures/site_overview.png, id=186, 2961.0625pt x 2181.14874pt>
+<../figures/site_overview.png, id=188, 2961.0625pt x 2181.14874pt>
 File: ../figures/site_overview.png Graphic file (type png)
 <use ../figures/site_overview.png>
 Package pdftex.def Info: ../figures/site_overview.png  used on input line 77.
@@ -705,7 +705,7 @@ Package pdftex.def Info: ../figures/site_overview.png  used on input line 77.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/displacement.png, id=187, 569.0058pt x 355.5684pt>
+<../figures/displacement.png, id=189, 569.0058pt x 355.5684pt>
 File: ../figures/displacement.png Graphic file (type png)
 <use ../figures/displacement.png>
 Package pdftex.def Info: ../figures/displacement.png  used on input line 85.
@@ -715,13 +715,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4] [5 <../figures/site_overview.png (PNG copy)>] [6 <../figures/displacement.p
 ng>] [7]
-<../figures/fetch.png, id=283, 420.8523pt x 141.6492pt>
+<../figures/fetch.png, id=285, 420.8523pt x 141.6492pt>
 File: ../figures/fetch.png Graphic file (type png)
 <use ../figures/fetch.png>
 Package pdftex.def Info: ../figures/fetch.png  used on input line 107.
 (pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
  [8] [9 <../figures/fetch.png>]
-<../figures/emergence.png, id=327, 3070.47125pt x 2988.16376pt>
+<../figures/emergence.png, id=328, 3070.47125pt x 2988.16376pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
 Package pdftex.def Info: ../figures/emergence.png  used on input line 125.
@@ -791,32 +791,32 @@ Overfull \hbox (77.61975pt too wide) in paragraph at lines 205--220
 [] [] 
  []
 
-<../figures/em_hull_fig.png, id=556, 853.5087pt x 284.5029pt>
+<../figures/em_hull_fig.png, id=555, 853.5087pt x 284.5029pt>
 File: ../figures/em_hull_fig.png Graphic file (type png)
 <use ../figures/em_hull_fig.png>
 Package pdftex.def Info: ../figures/em_hull_fig.png  used on input line 225.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/em_buff_fig.png, id=557, 853.5087pt x 284.5029pt>
+<../figures/em_buff_fig.png, id=556, 853.5087pt x 284.5029pt>
 File: ../figures/em_buff_fig.png Graphic file (type png)
 <use ../figures/em_buff_fig.png>
 Package pdftex.def Info: ../figures/em_buff_fig.png  used on input line 229.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_hull_fig.png, id=558, 853.5087pt x 284.5029pt>
+<../figures/mm_hull_fig.png, id=557, 853.5087pt x 284.5029pt>
 File: ../figures/mm_hull_fig.png Graphic file (type png)
 <use ../figures/mm_hull_fig.png>
 Package pdftex.def Info: ../figures/mm_hull_fig.png  used on input line 235.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_buff_fig.png, id=559, 853.5087pt x 284.5029pt>
+<../figures/mm_buff_fig.png, id=558, 853.5087pt x 284.5029pt>
 File: ../figures/mm_buff_fig.png Graphic file (type png)
 <use ../figures/mm_buff_fig.png>
 Package pdftex.def Info: ../figures/mm_buff_fig.png  used on input line 239.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/lm_hull_fig.png, id=560, 853.5087pt x 284.5029pt>
+<../figures/lm_hull_fig.png, id=559, 853.5087pt x 284.5029pt>
 File: ../figures/lm_hull_fig.png Graphic file (type png)
 <use ../figures/lm_hull_fig.png>
 Package pdftex.def Info: ../figures/lm_hull_fig.png  used on input line 245.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/lm_buff_fig.png, id=561, 853.5087pt x 284.5029pt>
+<../figures/lm_buff_fig.png, id=560, 853.5087pt x 284.5029pt>
 File: ../figures/lm_buff_fig.png Graphic file (type png)
 <use ../figures/lm_buff_fig.png>
 Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 249.
@@ -825,23 +825,23 @@ Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 249.
 NG copy)>] [22 <../figures/mm_hull_fig.png (PNG copy)> <../figures/mm_buff_fig.
 png (PNG copy)>] [23 <../figures/lm_hull_fig.png (PNG copy)> <../figures/lm_buf
 f_fig.png (PNG copy)>] [24]
-<../figures/island_hist.png, id=599, 426.75435pt x 227.53004pt>
+<../figures/island_hist.png, id=597, 426.75435pt x 227.53004pt>
 File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
 Package pdftex.def Info: ../figures/island_hist.png  used on input line 261.
 (pdftex.def)             Requested size: 292.5pt x 155.95087pt.
  [25 <../figures/island_hist.png (PNG copy)>]
-<../figures/em_mm_fig.png, id=610, 853.5087pt x 284.5029pt>
+<../figures/em_mm_fig.png, id=608, 853.5087pt x 284.5029pt>
 File: ../figures/em_mm_fig.png Graphic file (type png)
 <use ../figures/em_mm_fig.png>
 Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 269.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/em_lm_fig.png, id=611, 853.5087pt x 284.5029pt>
+<../figures/em_lm_fig.png, id=609, 853.5087pt x 284.5029pt>
 File: ../figures/em_lm_fig.png Graphic file (type png)
 <use ../figures/em_lm_fig.png>
 Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 273.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_lm_fig.png, id=612, 853.5087pt x 284.5029pt>
+<../figures/mm_lm_fig.png, id=610, 853.5087pt x 284.5029pt>
 File: ../figures/mm_lm_fig.png Graphic file (type png)
 <use ../figures/mm_lm_fig.png>
 Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 279.
@@ -853,20 +853,210 @@ s
  []
 
 [26] [27 <../figures/em_mm_fig.png (PNG copy)> <../figures/em_lm_fig.png (PNG c
-opy)>] [28 <../figures/mm_lm_fig.png (PNG copy)>] [29] (./main.bbl [30]
-[31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
-[]\OT1/cmr/m/n/12 Geological Sur-vey of Nor-way, 2015.  \OT1/cmr/m/it/12 Produk
-t-spesi-fikas-jon:
+opy)>] [28 <../figures/mm_lm_fig.png (PNG copy)>] [29]
+Overfull \hbox (5.01813pt too wide) in paragraph at lines 296--297
+\OT1/cmr/m/n/12 inland dy-nam-ics in pre-his-toric hunter-gatherer so-ci-et-ies
+' (Pre-h-COAST), which
+ []
+
+(./main.bbl
+Underfull \hbox (badness 1308) in paragraph at lines 30--35
+[]\OT1/cmr/m/n/12 Bekkby, T, Isach-sen, PE, Is^^Zus, M and Bakkes-tuen, V, 2008
+. GIS
  []
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 263--266
-\OT1/cmr/m/it/12 ND[]l^^\smasser, ver-s-jon 3.0\OT1/cmr/m/n/12 .  Only avail-ab
-le in Nor-we-gian: ht-
+Underfull \hbox (badness 4108) in paragraph at lines 30--35
+\OT1/cmr/m/n/12 mod-el-ing of wave ex-pos-ure at the seabed: a depth-attenuated
+
  []
 
-[33] [34] [35] [36] [37] [38] [39])
+
+Underfull \hbox (badness 2020) in paragraph at lines 30--35
+\OT1/cmr/m/n/12 wave ex-pos-ure model. \OT1/cmr/m/it/12 Mar-ine Geodesy\OT1/cmr
+/m/n/12 , 31(2):117--127.  DOI: ht-
+ []
+
+[30]
+Underfull \hbox (badness 1097) in paragraph at lines 73--78
+[]\OT1/cmr/m/n/12 Bjerck, HB, 2017. Set-tle-ments and sea-far-ing: Re-flec-tion
+s on the in-
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 73--78
+\OT1/cmr/m/n/12 Meso-lithic Nor-way and the Y^^Samana of Tierra del Fuego. \OT1
+/cmr/m/it/12 The
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
+[]\OT1/cmr/m/n/12 Breiman, L, 2003. \OT1/cmr/m/it/12 Manual - set-ting up, us-i
+ng, and un-der-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
+\OT1/cmr/m/it/12 stand-ing ran-dom forests V4. 0. 2003\OT1/cmr/m/n/12 .  Avail-
+able at: ht-
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 132--136
+\OT1/cmr/m/n/12 tps://www.stat.berkeley.edu/ breiman/papers.html [Last ac-cesse
+d 20
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 138--143
+\OT1/cmr/m/n/12 the Nor-we-gian coast. \OT1/cmr/m/it/12 The Holo-cene\OT1/cmr/m
+/n/12 , 24(11):1478--1490.  DOI: ht-
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 162--167
+[]\OT1/cmr/m/n/12 Burrows, MT, Har-vey, R and Robb, L, 2008. Wave ex-pos-ure in
+-
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 175--179
+[]\OT1/cmr/m/n/12 Conolly, J and Lake, M, 2006. \OT1/cmr/m/it/12 Geo-graph-ical
+ In-form-a-tion Sys-tems in
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 175--179
+\OT1/cmr/m/it/12 Ar-chae-ology\OT1/cmr/m/n/12 .  Cam-bridge: Cam-bridge Uni-ver
+-sity Press.  DOI: ht-
+ []
+
+[32]
+Underfull \hbox (badness 1997) in paragraph at lines 190--197
+[]\OT1/cmr/m/n/12 Darmark, K, Viken, S and Jo-han-nessen, LS, 2018. A good plac
+e.
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 229--234
+\OT1/cmr/m/n/12 gos. \OT1/cmr/m/it/12 Es-tu-ar-ine, Coastal and Shelf Sci-ence\
+OT1/cmr/m/n/12 , 57(5-6):887--898.  DOI:
+ []
+
+[33] [34]
+Underfull \hbox (badness 1902) in paragraph at lines 340--344
+[]\OT1/cmr/m/n/12 Hosmer, DW, Lemeshow, S and Sturdi-vant, RX, 2013. \OT1/cmr/m
+/it/12 Ap-plied lo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--371
+[]\OT1/cmr/m/n/12 J^^\rgensen, EK, 2020. Scalar ef-fects in ground slate tech-n
+o-logy
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 366--371
+\OT1/cmr/m/n/12 and the ad-apt-ive con-sequences for cir-cum-polar mari-time hu
+nter-
+ []
+
+[35]
+Underfull \hbox (badness 2486) in paragraph at lines 422--427
+[]\OT1/cmr/m/n/12 Lopez-Romero, EG-dlA, 2008. Char-ac-ter-iz-ing the evol-u-tio
+n of visual
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 422--427
+\OT1/cmr/m/n/12 land-scapes in the late pre-his-tory of south-west Mor-bi-han (
+Brit-
+ []
+
+[36]
+Underfull \hbox (badness 1460) in paragraph at lines 503--508
+[]\OT1/cmr/m/n/12 Nitter, M, Elvestad, E and Selsing, L, 2013. Mari-time site p
+ro-tec-
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 503--508
+\OT1/cmr/m/n/12 tion and the fetch method: an ex-ample from Roga-land, Nor-way.
+
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 503--508
+\OT1/cmr/m/it/12 In-ter-na-tional Journal of Naut-ical Ar-chae-ology\OT1/cmr/m/
+n/12 , 42(1):87--102.  DOI:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--516
+[]\OT1/cmr/m/n/12 Norwegian Dir-ect-or-ate for Cul-tural Her-it-age, 2018. \OT1
+/cmr/m/it/12 Aske-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--516
+\OT1/cmr/m/it/12 lad-den ver-s-jon 3.0 bruker-veiled-ning\OT1/cmr/m/n/12 .  Ava
+il-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--516
+\OT1/cmr/m/n/12 https://www.riksantikvaren.no/veileder/askeladden-versjon-3-0-
+ []
+
+[37]
+Underfull \hbox (badness 5203) in paragraph at lines 551--555
+[]\OT1/cmr/m/n/12 Rufibach, K, 2010. Use of Brier score to as-sess bin-ary pre-
+dic-
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 551--555
+\OT1/cmr/m/n/12 tions. \OT1/cmr/m/it/12 Journal of Clin-ical Epi-demi-ology\OT1
+/cmr/m/n/12 , 63(8):938--939.  DOI: ht-
+ []
+
+[38]
+Underfull \hbox (badness 3271) in paragraph at lines 615--619
+[]\OT1/cmr/m/n/12 Spencer, C and Bevan, A, 2018. Set-tle-ment loc-a-tion mod-el
+s, ar-
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 615--619
+\OT1/cmr/m/n/12 chae-olo-gical sur-vey data and so-cial change in Bronze Age Cr
+ete.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 615--619
+\OT1/cmr/m/it/12 Journal of An-thro-po-lo-gical Ar-chae-ology\OT1/cmr/m/n/12 , 
+52:71--86.  DOI: ht-
+ []
+
+[39]
+Underfull \hbox (badness 1515) in paragraph at lines 677--682
+[]\OT1/cmr/m/n/12 Verhagen, P and Whit-ley, TG, 2012. In-teg-rat-ing ar-chae-ol
+o-gical the-
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 677--682
+\OT1/cmr/m/n/12 ory and pre-dict-ive mod-el-ling: A live re-port from the scene
+.
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 677--682
+\OT1/cmr/m/it/12 Journal of Ar-chae-olo-gical Method and The-ory\OT1/cmr/m/n/12
+ , 19(1):49--100.  DOI:
+ []
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
  [40]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
@@ -875,16 +1065,20 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D5B548A34A9B94728420322F7E134E82;1204.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 9041 strings out of 492982
- 137612 string characters out of 6134896
- 241002 words of memory out of 5000000
- 12308 multiletter control sequences out of 15000+600000
- 9670 words of font info for 34 fonts, out of 8000000 for 9000
+ 9044 strings out of 492982
+ 137686 string characters out of 6134896
+ 241965 words of memory out of 5000000
+ 12311 multiletter control sequences out of 15000+600000
+ 9501 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,2924b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2910b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -895,12 +1089,11 @@ ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
-b>
-Output written on main.pdf (40 pages, 71797812 bytes).
+i12.pfb>
+Output written on main.pdf (40 pages, 71794983 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 726 compressed objects within 8 object streams
- 176 named destinations out of 1000 (max. 500000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 177 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

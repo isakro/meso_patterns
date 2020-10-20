@@ -1,50 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
-The style file: custom_ref.bst
+The style file: rev_style.bst
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--missing publisher in malhotra2007
 Warning--empty journal in parr2018
 Warning--missing institution in sorensen2015
-You've used 98 entries,
-            3218 wiz_defined-function locations,
-            1221 strings with 24398 characters,
-and the built_in function-call counts, 68123 in all, are:
-= -- 5507
-> -- 3183
-< -- 33
-+ -- 1164
-- -- 1042
-* -- 4739
-:= -- 11042
-add.period$ -- 326
-call.type$ -- 98
-change.case$ -- 758
-chr.to.int$ -- 114
-cite$ -- 100
-duplicate$ -- 4791
-empty$ -- 5116
-format.name$ -- 1282
-if$ -- 13349
+You've used 99 entries,
+            3344 wiz_defined-function locations,
+            1292 strings with 26862 characters,
+and the built_in function-call counts, 101780 in all, are:
+= -- 11647
+> -- 3198
+< -- 32
++ -- 1550
+- -- 1047
+* -- 5596
+:= -- 12486
+add.period$ -- 388
+call.type$ -- 99
+change.case$ -- 759
+chr.to.int$ -- 115
+cite$ -- 102
+duplicate$ -- 9601
+empty$ -- 5889
+format.name$ -- 1287
+if$ -- 20264
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 940
-newline$ -- 505
-num.names$ -- 543
-pop$ -- 2070
+missing$ -- 949
+newline$ -- 415
+num.names$ -- 548
+pop$ -- 3554
 preamble$ -- 1
-purify$ -- 606
+purify$ -- 611
 quote$ -- 0
-skip$ -- 2086
+skip$ -- 5901
 stack$ -- 0
-substring$ -- 2914
-swap$ -- 2665
-text.length$ -- 28
+substring$ -- 4529
+swap$ -- 7960
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1108
-warning$ -- 2
-while$ -- 692
+type$ -- 1116
+warning$ -- 3
+while$ -- 772
 width$ -- 0
-write$ -- 1316
-(There were 2 warnings)
+write$ -- 1331
+(There were 3 warnings)
