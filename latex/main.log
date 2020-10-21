@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  21 OCT 2020 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  21 OCT 2020 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,11 +715,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4] [5 <../figures/site_overview.png (PNG copy)>] [6 <../figures/displacement.p
 ng>] [7]
-<../figures/fetch.png, id=285, 420.8523pt x 141.6492pt>
+<../figures/fetch.png, id=285, 597.9138pt x 190.19055pt>
 File: ../figures/fetch.png Graphic file (type png)
 <use ../figures/fetch.png>
 Package pdftex.def Info: ../figures/fetch.png  used on input line 107.
-(pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
+(pdftex.def)             Requested size: 507.00119pt x 161.27094pt.
  [8] [9 <../figures/fetch.png>]
 <../figures/emergence.png, id=328, 720.7728pt x 701.5008pt>
 File: ../figures/emergence.png Graphic file (type png)
@@ -1063,11 +1063,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
  ) 
 Here is how much of TeX's memory you used:
- 9044 strings out of 492982
- 137683 string characters out of 6134896
+ 9046 strings out of 492982
+ 137704 string characters out of 6134896
  241962 words of memory out of 5000000
- 12310 multiletter control sequences out of 15000+600000
- 9501 words of font info for 33 fonts, out of 8000000 for 9000
+ 12311 multiletter control sequences out of 15000+600000
+ 9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,9n,92p,2910b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -1080,11 +1080,12 @@ ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb>
-Output written on main.pdf (41 pages, 75205099 bytes).
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
+b>
+Output written on main.pdf (41 pages, 75548203 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 722 compressed objects within 8 object streams
+ 815 PDF objects out of 1000 (max. 8388607)
+ 728 compressed objects within 8 object streams
  178 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
