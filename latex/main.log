@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  21 OCT 2020 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  21 OCT 2020 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -721,12 +721,13 @@ File: ../figures/fetch.png Graphic file (type png)
 Package pdftex.def Info: ../figures/fetch.png  used on input line 107.
 (pdftex.def)             Requested size: 507.00119pt x 170.64603pt.
  [8] [9 <../figures/fetch.png>]
-<../figures/emergence.png, id=328, 3070.47125pt x 2988.16376pt>
+<../figures/emergence.png, id=328, 720.7728pt x 701.5008pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
 Package pdftex.def Info: ../figures/emergence.png  used on input line 125.
-(pdftex.def)             Requested size: 390.0pt x 379.53818pt.
- [10] [11 <../figures/emergence.png (PNG copy)>] [12] [13]
+(pdftex.def)             Requested size: 390.0pt x 379.57549pt.
+ [10] [11 <../figures/emergence.png>]
+[12] [13]
 Overfull \hbox (11.35417pt too wide) in paragraph at lines 148--148
 \OT1/cmr/m/n/12 Relatively high pre-dict-ive power, ease of im-ple-ment-a-tion 
 and its non-parametric
@@ -853,13 +854,7 @@ s
  []
 
 [26] [27 <../figures/em_mm_fig.png (PNG copy)> <../figures/em_lm_fig.png (PNG c
-opy)>] [28 <../figures/mm_lm_fig.png (PNG copy)>] [29]
-Overfull \hbox (5.01813pt too wide) in paragraph at lines 303--304
-\OT1/cmr/m/n/12 inland dy-nam-ics in pre-his-toric hunter-gatherer so-ci-et-ies
-' (Pre-h-COAST), which
- []
-
-(./main.bbl
+opy)>] [28 <../figures/mm_lm_fig.png (PNG copy)>] [29] (./main.bbl
 Underfull \hbox (badness 1308) in paragraph at lines 30--35
 []\OT1/cmr/m/n/12 Bekkby, T, Isach-sen, PE, Is^^Zus, M and Bakkes-tuen, V, 2008
 . GIS
@@ -919,7 +914,7 @@ Underfull \hbox (badness 2452) in paragraph at lines 162--167
 -
  []
 
-
+[32]
 Underfull \hbox (badness 1237) in paragraph at lines 175--179
 []\OT1/cmr/m/n/12 Conolly, J and Lake, M, 2006. \OT1/cmr/m/it/12 Geo-graph-ical
  In-form-a-tion Sys-tems in
@@ -931,7 +926,7 @@ Underfull \hbox (badness 1189) in paragraph at lines 175--179
 -sity Press.  DOI: ht-
  []
 
-[32]
+
 Underfull \hbox (badness 1997) in paragraph at lines 190--197
 []\OT1/cmr/m/n/12 Darmark, K, Viken, S and Jo-han-nessen, LS, 2018. A good plac
 e.
@@ -1056,9 +1051,9 @@ Underfull \hbox (badness 1082) in paragraph at lines 677--682
  , 19(1):49--100.  DOI:
  []
 
-)
+[40])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 306.
- [40]
+ [41]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 306.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
@@ -1068,13 +1063,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
  ) 
 Here is how much of TeX's memory you used:
- 9043 strings out of 492982
- 137676 string characters out of 6134896
+ 9044 strings out of 492982
+ 137683 string characters out of 6134896
  241962 words of memory out of 5000000
  12310 multiletter control sequences out of 15000+600000
  9501 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,92p,2910b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2910b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -1086,10 +1081,10 @@ lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb>
-Output written on main.pdf (40 pages, 71795440 bytes).
+Output written on main.pdf (41 pages, 75205099 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 719 compressed objects within 8 object streams
- 177 named destinations out of 1000 (max. 500000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 722 compressed objects within 8 object streams
+ 178 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
