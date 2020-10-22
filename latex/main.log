@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  22 OCT 2020 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.10)  22 OCT 2020 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -718,143 +718,143 @@ ng>] [7]
 <../figures/fetch.png, id=285, 597.9138pt x 190.19055pt>
 File: ../figures/fetch.png Graphic file (type png)
 <use ../figures/fetch.png>
-Package pdftex.def Info: ../figures/fetch.png  used on input line 107.
+Package pdftex.def Info: ../figures/fetch.png  used on input line 111.
 (pdftex.def)             Requested size: 507.00119pt x 161.27094pt.
  [8] [9 <../figures/fetch.png>]
 <../figures/emergence.png, id=328, 720.7728pt x 701.5008pt>
 File: ../figures/emergence.png Graphic file (type png)
 <use ../figures/emergence.png>
-Package pdftex.def Info: ../figures/emergence.png  used on input line 125.
+Package pdftex.def Info: ../figures/emergence.png  used on input line 133.
 (pdftex.def)             Requested size: 390.0pt x 379.57549pt.
  [10] [11 <../figures/emergence.png>]
-[12] [13]
-Overfull \hbox (11.35417pt too wide) in paragraph at lines 148--148
+[12] [13] [14]
+Overfull \hbox (11.35417pt too wide) in paragraph at lines 156--156
 \OT1/cmr/m/n/12 Relatively high pre-dict-ive power, ease of im-ple-ment-a-tion 
 and its non-parametric
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 169.
+(caption)                particular \caption on input line 177.
 See the caption package documentation for explanation.
 
 Package hyperref Info: bookmark level for unknown boxing defaults to 0 on input
- line 169.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 169.
+ line 177.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 177.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 151--170
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 159--178
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--170
+Underfull \hbox (badness 10000) in paragraph at lines 159--178
 
  []
 
 [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 194.
+(caption)                particular \caption on input line 202.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 177--195
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 185--203
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--195
+Underfull \hbox (badness 10000) in paragraph at lines 185--203
 
  []
 
 [17] [18] [19]
-Overfull \hbox (75.66144pt too wide) in paragraph at lines 205--220
+Overfull \hbox (75.66144pt too wide) in paragraph at lines 213--228
 [] [] 
  []
 
 <../figures/em_hull_fig.png, id=555, 853.5087pt x 284.5029pt>
 File: ../figures/em_hull_fig.png Graphic file (type png)
 <use ../figures/em_hull_fig.png>
-Package pdftex.def Info: ../figures/em_hull_fig.png  used on input line 225.
+Package pdftex.def Info: ../figures/em_hull_fig.png  used on input line 233.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/em_buff_fig.png, id=556, 853.5087pt x 284.5029pt>
 File: ../figures/em_buff_fig.png Graphic file (type png)
 <use ../figures/em_buff_fig.png>
-Package pdftex.def Info: ../figures/em_buff_fig.png  used on input line 229.
+Package pdftex.def Info: ../figures/em_buff_fig.png  used on input line 237.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/mm_hull_fig.png, id=557, 853.5087pt x 284.5029pt>
 File: ../figures/mm_hull_fig.png Graphic file (type png)
 <use ../figures/mm_hull_fig.png>
-Package pdftex.def Info: ../figures/mm_hull_fig.png  used on input line 235.
+Package pdftex.def Info: ../figures/mm_hull_fig.png  used on input line 243.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/mm_buff_fig.png, id=558, 853.5087pt x 284.5029pt>
 File: ../figures/mm_buff_fig.png Graphic file (type png)
 <use ../figures/mm_buff_fig.png>
-Package pdftex.def Info: ../figures/mm_buff_fig.png  used on input line 239.
+Package pdftex.def Info: ../figures/mm_buff_fig.png  used on input line 247.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/lm_hull_fig.png, id=559, 853.5087pt x 284.5029pt>
 File: ../figures/lm_hull_fig.png Graphic file (type png)
 <use ../figures/lm_hull_fig.png>
-Package pdftex.def Info: ../figures/lm_hull_fig.png  used on input line 245.
+Package pdftex.def Info: ../figures/lm_hull_fig.png  used on input line 253.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 <../figures/lm_buff_fig.png, id=560, 853.5087pt x 284.5029pt>
 File: ../figures/lm_buff_fig.png Graphic file (type png)
 <use ../figures/lm_buff_fig.png>
-Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 249.
+Package pdftex.def Info: ../figures/lm_buff_fig.png  used on input line 257.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 [20] [21 <../figures/em_hull_fig.png (PNG copy)> <../figures/em_buff_fig.png (P
 NG copy)>] [22 <../figures/mm_hull_fig.png (PNG copy)> <../figures/mm_buff_fig.
 png (PNG copy)>] [23 <../figures/lm_hull_fig.png (PNG copy)> <../figures/lm_buf
 f_fig.png (PNG copy)>] [24]
-<../figures/island_hist.png, id=596, 426.75435pt x 227.53004pt>
+<../figures/island_hist.png, id=600, 426.75435pt x 227.53004pt>
 File: ../figures/island_hist.png Graphic file (type png)
 <use ../figures/island_hist.png>
-Package pdftex.def Info: ../figures/island_hist.png  used on input line 264.
+Package pdftex.def Info: ../figures/island_hist.png  used on input line 275.
 (pdftex.def)             Requested size: 292.5pt x 155.95087pt.
- [25 <../figures/island_hist.png (PNG copy)>]
-<../figures/em_mm_fig.png, id=607, 853.5087pt x 284.5029pt>
+<../figures/em_mm_fig.png, id=601, 853.5087pt x 284.5029pt>
 File: ../figures/em_mm_fig.png Graphic file (type png)
 <use ../figures/em_mm_fig.png>
-Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 274.
+Package pdftex.def Info: ../figures/em_mm_fig.png  used on input line 285.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/em_lm_fig.png, id=608, 853.5087pt x 284.5029pt>
+<../figures/em_lm_fig.png, id=602, 853.5087pt x 284.5029pt>
 File: ../figures/em_lm_fig.png Graphic file (type png)
 <use ../figures/em_lm_fig.png>
-Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 278.
+Package pdftex.def Info: ../figures/em_lm_fig.png  used on input line 289.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
-<../figures/mm_lm_fig.png, id=609, 853.5087pt x 284.5029pt>
+<../figures/mm_lm_fig.png, id=603, 853.5087pt x 284.5029pt>
 File: ../figures/mm_lm_fig.png Graphic file (type png)
 <use ../figures/mm_lm_fig.png>
-Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 284.
+Package pdftex.def Info: ../figures/mm_lm_fig.png  used on input line 295.
 (pdftex.def)             Requested size: 585.0pt x 195.00052pt.
 
-Overfull \hbox (44.38455pt too wide) in paragraph at lines 289--289
+Overfull \hbox (44.38455pt too wide) in paragraph at lines 300--300
 []\OT1/cmr/bx/n/14.4 Settlement pat-terns of Meso-lithic hunter-fisher-gatherer
 s 
  []
 
-[26] [27 <../figures/em_mm_fig.png (PNG copy)> <../figures/em_lm_fig.png (PNG c
-opy)>] [28 <../figures/mm_lm_fig.png (PNG copy)>] [29] (./main.bbl
+[25] [26 <../figures/island_hist.png (PNG copy)>] [27 <../figures/em_mm_fig.png
+ (PNG copy)> <../figures/em_lm_fig.png (PNG copy)>] [28 <../figures/mm_lm_fig.p
+ng (PNG copy)>] [29] (./main.bbl
 Underfull \hbox (badness 1308) in paragraph at lines 30--35
 []\OT1/cmr/m/n/12 Bekkby, T, Isach-sen, PE, Is^^Zus, M and Bakkes-tuen, V, 2008
 . GIS
@@ -897,9 +897,9 @@ able at: ht-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 132--136
-\OT1/cmr/m/n/12 tps://www.stat.berkeley.edu/ breiman/papers.html [Last ac-cesse
-d 20
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
+\OT1/cmr/m/n/12 tps://www.stat.berkeley.edu/[]breiman/papers.html [Last ac-cess
+ed 20
  []
 
 
@@ -1058,20 +1058,24 @@ Underfull \hbox (badness 1082) in paragraph at lines 682--687
  []
 
 [40])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 306.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
  [41]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 306.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 306.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D5B548A34A9B94728420322F7E134E82;1204.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 320.
  ) 
 Here is how much of TeX's memory you used:
  9046 strings out of 492982
  137704 string characters out of 6134896
- 241966 words of memory out of 5000000
+ 242965 words of memory out of 5000000
  12311 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1088,7 +1092,7 @@ sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on main.pdf (41 pages, 75589478 bytes).
+Output written on main.pdf (41 pages, 75600192 bytes).
 PDF statistics:
  814 PDF objects out of 1000 (max. 8388607)
  727 compressed objects within 8 object streams

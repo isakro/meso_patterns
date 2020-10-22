@@ -104,7 +104,7 @@ FUNCTION {output.check}
   if$
 }
 FUNCTION {fin.entry}
-{ add.period$
+{ %add.period$
   write$
   newline$
 }
@@ -1040,7 +1040,8 @@ FUNCTION {article}
     }
   if$
   eid empty$
-    { format.journal.pages }
+    { format.journal.pages 
+    add.period$ }
     { format.journal.eid }
   if$
   format.doi output
@@ -1078,6 +1079,7 @@ FUNCTION {book}
       format.book.crossref output.nonnull
     }
   if$
+  add.period$
   format.doi output
   fin.entry
   write.url
@@ -1157,6 +1159,7 @@ FUNCTION {incollection}
     }
   if$
   format.pages "pages" output.check
+  add.period$
   format.doi output
   format.note output
   fin.entry
@@ -1203,6 +1206,7 @@ FUNCTION {manual}
   format.edition output
   format.doi output
   format.note output
+  add.period$
   fin.entry
   write.url
 }

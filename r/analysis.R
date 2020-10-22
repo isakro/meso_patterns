@@ -252,7 +252,7 @@ em_hull_rf <- imp_nest_rf(rfd_em_hull, nimp = 5, ntrees = tree_n,
                           depend = 'class', nindep = ncol(rfd_em_hull) - 2)
 
 # Pass results to plot function defined in plot_functions.r
-em_hull_rfp <- rfplot_func(em_hull_rf)
+em_hull_rfp <- rfplot_func(em_hull_rf, x_digits = 0.001)
 
 # Random forest. Early Mesolithic - Buffer sample
 rfd_em_buff <- dt[dt$phase == 'em' & dt$class != 'hull', 
@@ -262,7 +262,7 @@ rfd_em_buff$class <- as.factor(rfd_em_buff$class)
 em_buff_rf <- imp_nest_rf(rfd_em_buff, nimp = 5, ntrees = tree_n, 
                           depend = 'class', nindep = ncol(rfd_em_buff) - 2)
 
-em_buff_rfp <- rfplot_func(em_buff_rf)
+em_buff_rfp <- rfplot_func(em_buff_rf, x_digits = 0.001)
 
 # Random forest. Middle Mesolithic - Hull sample
 rfd_mm_hull <- dt[dt$phase == 'mm' & dt$class != 'buff', 
@@ -272,7 +272,7 @@ rfd_mm_hull$class <- as.factor(rfd_mm_hull$class)
 mm_hull_rf <- imp_nest_rf(rfd_mm_hull, nimp = 5, ntrees = tree_n, 
                           depend = 'class', nindep = ncol(rfd_mm_hull) - 2)
 
-mm_hull_rfp <- rfplot_func(mm_hull_rf)
+mm_hull_rfp <- rfplot_func(mm_hull_rf, x_digits = 0.001)
 
 # Random forest. Middle Mesolithic - Buffer sample
 rfd_mm_buff <- dt[dt$phase == 'mm' & dt$class != 'hull', 
@@ -282,7 +282,7 @@ rfd_mm_buff$class <- as.factor(rfd_mm_buff$class)
 mm_buff_rf <- imp_nest_rf(rfd_mm_buff, nimp = 5, ntrees = tree_n, 
                           depend = 'class', nindep = ncol(rfd_mm_buff) - 2)
 
-mm_buff_rfp <- rfplot_func(mm_buff_rf)
+mm_buff_rfp <- rfplot_func(mm_buff_rf, x_digits = 0.001)
 
 # Random forest. Late Mesolithic - Hull sample
 rfd_lm_hull <- dt[dt$phase == 'lm' & dt$class != 'buff', 
@@ -292,7 +292,7 @@ rfd_lm_hull$class <- as.factor(rfd_lm_hull$class)
 lm_hull_rf <- imp_nest_rf(rfd_lm_hull, nimp = 5, ntrees = tree_n, 
                           depend = 'class', nindep = ncol(rfd_lm_hull) - 2)
 
-lm_hull_rfp <- rfplot_func(lm_hull_rf)
+lm_hull_rfp <- rfplot_func(lm_hull_rf, x_digits = 0.001)
 
 # Random forest. Late Mesolithic - Buffer sample
 rfd_lm_buff <- dt[dt$phase == 'lm' & dt$class != 'hull', 
@@ -302,7 +302,7 @@ rfd_lm_buff$class <- as.factor(rfd_lm_buff$class)
 lm_buff_rf <-imp_nest_rf(rfd_lm_buff, nimp = 5, ntrees = tree_n, 
                          depend = 'class', nindep = ncol(rfd_lm_buff) - 2)
 
-lm_buff_rfp <- rfplot_func(lm_buff_rf)
+lm_buff_rfp <- rfplot_func(lm_buff_rf, x_digits = 0.001)
 
 # Plot and save site/non-site results --------------------------------- 
 em_hull <- readPNG('../gis_output/maps/em_hull.png')

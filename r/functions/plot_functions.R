@@ -60,7 +60,7 @@ corr_plot <- function(data, title, ...){
                 panel.grid.minor = element_blank())
 }
 
-##### Functions for percentile boxplot for bootstrapped coefficients #####
+##### Functions for percentile box-plot for bootstrapped coefficients #####
 percentil_func <- function(x) {
   r <- quantile(x, probs = c(0.025, 0.25, 0.5, 0.75, 0.975))
   names(r) <- c("ymin", "lower", "middle", "upper", "ymax")
@@ -167,7 +167,7 @@ rfplot_func <- function (input_data, accuracy = TRUE, impute = TRUE,
     names(varimp) <- as.character(unique(melt(input_data[3,])[,1]))
   }
   
-  # If the accuracy scores are to have a seperate accuracy score subtracted.
+  # If the accuracy scores are to have a separate accuracy score subtracted.
   # In this case the two island variables are passed in as the 'alt' accuracy
   # scores.
   if(!(is.null(alt_acc))){
@@ -201,11 +201,12 @@ rfplot_func <- function (input_data, accuracy = TRUE, impute = TRUE,
     theme(panel.grid.minor = element_blank(), 
           panel.grid.major = element_blank(), 
           axis.title = element_text(size = 8),
-          plot.title = element_text(hjust = 0.5)) +
+          plot.title = element_text(hjust = 0.5),
+          plot.margin = margin(t = 0, r = 0.1, b = 0, l = 0, unit = "pt")) +
     scale_y_continuous(labels = function(x) round(x, 2)) +
     coord_flip()
   
-  # If number of digits on x-axis is specified (coord_flip above switches x/y)
+  # If number of digits on x-axis is specified (coord_flip() above switches x/y)
   if(!(is.null(x_digits))){
     plt <- plt + 
       scale_y_continuous(labels = number_format(accuracy = x_digits))
@@ -222,7 +223,7 @@ rfplot_func <- function (input_data, accuracy = TRUE, impute = TRUE,
 }
 
 # Utility function to retrieve a legend for having one legend with
-# multiple ggplots.
+# multiple ggplots (used for the island histograms)
 g_legend <- function(plt){
   tmp <- ggplot_gtable(ggplot_build(plt))
   leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
