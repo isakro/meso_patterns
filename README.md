@@ -38,7 +38,7 @@ This repository holds data, code, figures and text files for the paper "Algorith
 All GIS analyses were run in GRASS GIS 7.6.1 (GRASS Development Team 2017) with the v.centerpoint extension on Windows 10. These were run using a Python 2.7 script (Python Software Foundation) with the numpy module (van der Walt et al. 2011). The coordinate system used is WGS84/UTM zone 32N (EPSG:32632). The Python script has to be run from a GRASS mapset with the correct coordinate system (some additional instructions on how to run the script are given at the top of analysis.py which can be opened in a text editor). The script took about 35 days to execute on a laptop computer with an Intel Core i7-8550U 1.8GHz CPU (a crash makes this estimation imprecise). Additionally, QGIS 3.6.3 (QGIS Development Team 2019) and ArcGIS 10.6 (Esri 2018) were used for some of the visualisation.
 
 ### 3. R
-The statistical analyses were run using R 3.6.3 (R Core Team 2020) on Ubuntu 18.04. Additional libraries used were ggplot2 (Wickham 2016), GGally (Schloerke et al. 2018), gridExtra (Auguie 2017), cowplot (Wilke 2019), png (Urbanek 2013), car (Fox & Weisberg 2019), boot (Canty & Ripley 2019; Davison & Hinkley 1997), mice (van Buuren & Groothuis-Oudshoorn 2011), ModelMetrics (Hunt 2018), caret (Kuhn 2019) and randomForest (Liaw & Wiener 2002). The main script is *analysis.R*. This loads functions from *functions.R* and *plot_functions.R*. The complete R script ran in 14.5 hours on a laptop computer with an AMD Ryzen 5 Pro 3500U 2.1GHz CPU. 
+The statistical analyses were run using R 3.6.3 (R Core Team 2020) on Ubuntu 18.04. Additional libraries used were boot (Canty & Ripley 2019; Davison & Hinkley 1997), car (Fox & Weisberg 2019), caret (Kuhn 2019), cowplot (Wilke 2019), GGally (Schloerke et al. 2018), ggplot2 (Wickham 2016), gridExtra (Auguie 2017), mice (van Buuren & Groothuis-Oudshoorn 2011), ModelMetrics (Hunt 2018), png (Urbanek 2013), randomForest (Liaw & Wiener 2002), reshape2 (Wickham 2007) and scales (Wickham & Seidel 2020). The main script is *analysis.R*. This loads functions from *functions.R* and *plot_functions.R*. The complete R script ran in 12.27 hours on a laptop computer with an AMD Ryzen 5 Pro 3500U 2.1GHz CPU. 
 
 ### 4. Data 
 Apart from changing file formats and coordinate systems, as well as reducing the extent of some data, spatial data from other sources are provided in their original form. This is with the exception of *sites.gpkg*. 
@@ -52,19 +52,19 @@ https://askeladden.ra.no/Askeladden (the page is currently only available in Nor
 
 ### 5. Licenses
 The following data are under [the Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0):  
-* *sites.gpkg* is slightly modified site data originally provided by the Norwegian Directorate for Cultural Heritage (see above).  
+* *sites.gpkg* is slightly modified site data originally provided by the Norwegian Directorate for Cultural Heritage (see section 4 above).  
 * *lakes.gpkg* is from "the Norwegian lake database" as provided by [the Norwegian Water Resources and Energy Directorate](http://nedlasting.nve.no/gis/) (page only available in Norwegian).  
 * *sediments.gpkg* is from "Sediments" as provided by [the Geological Survey of Norway](https://www.ngu.no/en/topic/datasets).   
-* GeoTIFF files in *gis_data\studyarea\* are from "National elevation model DTM10" as provided by [the Norwegian Mapping Authority](https://hoydedata.no/LaserInnsyn/).
+* GeoTIFF files in *gis_data/studyarea/* are from "National elevation model DTM10" as provided by [the Norwegian Mapping Authority](https://hoydedata.no/LaserInnsyn/).
 
-GeoTIFF files in *gis_data\region\* are from EU-DEM v.1.1 as provided by [the European Union, Copernicus Land Monitoring Service 2018, European Environment Agency](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1). This is open and free following the Copernicus data and information policy Regulation (EU) No 1159/2013 of 12 July 2013: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R1159
+GeoTIFF files in *gis_data/region/* are from EU-DEM v.1.1 as provided by [the European Union, Copernicus Land Monitoring Service 2018, European Environment Agency](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1). This is open and free following the Copernicus data and information policy Regulation (EU) No 1159/2013 of 12 July 2013: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R1159
 
 The following files are based on shoreline displacement data derived from Sørensen et al. 2015, available in Solheim 2017, and Sørensen et al. 2014. Both are under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/):   
 * *bamble.csv*, *gunnarsrod.csv*, *recode_bamble.txt*, *recode_gunnarsrod.txt*
 
 The remaining data in this repository are released under [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  
 Text under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/).  
-Code under [MIT](http://opensource.org/licenses/MIT). Year: 2020, holder: \[Omitted for blinding\]
+Code under [MIT](http://opensource.org/licenses/MIT). Year: 2020, holder: Isak Roalkvam
 
 ### 6. References
 Auguie, G. 2017. *gridExtra: Miscellaneous Functions for "Grid" Graphics*. R package version 2.3. https://CRAN.R-project.org/package=gridExtra 
@@ -103,7 +103,11 @@ van Buuren, S. & K. Groothuis-Oudshoorn 2011. mice: Multivariate Imputation by C
 
 van der Walt, S., C. Colbert & G. Varoquaux 2011. The NumPy Array: A Structure for Efficient Numerical Computation, *Computing in Science & Engineering*, 13, 22-30. http://dx.doi.org/10.1109/MCSE.2011.37
 
+Wickham, H. 2007. Reshaping Data with the reshape Package. Journal of Statistical Software, 21(12), 1-20. URL http://www.jstatsoft.org/v21/i12/.
+
 Wickham, H. 2016. *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag, New York. https://ggplot2.tidyverse.org
+
+Wickham, H. & Seidel, D. 2020. scales: Scale Functions for Visualization. R package version 1.1.1. https://CRAN.R-project.org/package=scales
 
 Wilke, C. O. 2019. *cowplot: Streamlined Plot Theme and Plot Annotations for 'ggplot2'*. R package version 1.0.0. https://CRAN.R-project.org/package=cowplot
 
