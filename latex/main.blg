@@ -4,48 +4,46 @@ The top-level auxiliary file: main.aux
 The style file: rev_style.bst
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--missing publisher in malhotra2007
 Warning--empty journal in parr2018
-Warning--missing institution in sorensen2015
 You've used 99 entries,
-            3344 wiz_defined-function locations,
-            1292 strings with 26862 characters,
-and the built_in function-call counts, 101780 in all, are:
-= -- 11647
+            3349 wiz_defined-function locations,
+            1292 strings with 26825 characters,
+and the built_in function-call counts, 101843 in all, are:
+= -- 11662
 > -- 3198
 < -- 32
 + -- 1550
 - -- 1047
-* -- 5596
-:= -- 12486
+* -- 5590
+:= -- 12514
 add.period$ -- 388
 call.type$ -- 99
-change.case$ -- 759
+change.case$ -- 755
 chr.to.int$ -- 115
-cite$ -- 102
-duplicate$ -- 9601
-empty$ -- 5889
+cite$ -- 100
+duplicate$ -- 9593
+empty$ -- 5906
 format.name$ -- 1287
-if$ -- 20264
+if$ -- 20294
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 949
-newline$ -- 415
+missing$ -- 947
+newline$ -- 420
 num.names$ -- 548
-pop$ -- 3554
+pop$ -- 3549
 preamble$ -- 1
 purify$ -- 611
 quote$ -- 0
-skip$ -- 5901
+skip$ -- 5919
 stack$ -- 0
-substring$ -- 4529
-swap$ -- 7960
+substring$ -- 4525
+swap$ -- 7948
 text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1116
-warning$ -- 3
+type$ -- 1108
+warning$ -- 1
 while$ -- 772
 width$ -- 0
-write$ -- 1331
-(There were 3 warnings)
+write$ -- 1334
+(There was 1 warning)

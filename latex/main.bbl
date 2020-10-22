@@ -132,7 +132,7 @@ Breiman, L \harvardyearleft 2001{\natexlab{b}}\harvardyearright{}. {Statistical
 Breiman, L \harvardyearleft 2003\harvardyearright{}. \emph{Manual - setting up,
   using, and understanding random forests V4. 0. 2003}.
 \newblock Available at: https://www.stat.berkeley.edu/~breiman/papers.html
-  [Last accessed 20 October 2020.
+  [Last accessed 20 October 2020].
 
 \harvarditem{Breivik}{2014}{breivik2014}
 Breivik, HM \harvardyearleft 2014\harvardyearright{}. Palaeo-oceanographic
@@ -233,10 +233,10 @@ Ekebom, J, Laihonen, P \harvardand{} Suominen, T \harvardyearleft
 \newblock DOI: https://doi.org/10.1016/S0272-7714(02)00419-5.
 
 \harvarditem{Eskeland}{2017}{eskeland2017}
-Eskeland, KF \harvardyearleft 2017\harvardyearright{}. \emph{E18 {Langangen
-  Rugtvedt}, 16/06999, {Porsgrunn} og {Bamble} kommune}. Tech. rep., Telemark
-  County Municipality.
-\newblock Report, Archaeological survey.
+Eskeland, KF \harvardyearleft 2017\harvardyearright{}. \emph{Rapport,
+  arkeologisk registrering. {E18} {Langangen Rugtvedt}, 16/06999, {Porsgrunn}
+  og {Bamble} kommune}.
+\newblock Skien: Telemark County Municipality.
 
 \harvarditem[Fisher et~al.]{Fisher, Farrelly, Maddocks \harvardand{}
   Ruggles}{1997}{fisher1997}
@@ -248,7 +248,8 @@ Fisher, P, Farrelly, C, Maddocks, A \harvardand{} Ruggles, C \harvardyearleft
 
 \harvarditem{Fox}{2008}{fox2008}
 Fox, J \harvardyearleft 2008\harvardyearright{}. \emph{Applied regression
-  analysis and generalized linear models}. 2nd ed.
+  analysis and generalized linear models}.
+\newblock 2nd ed.
 \newblock Thousand Oaks: Sage Publications.
 
 \harvarditem{Fuglestvedt}{2012}{fuglestvedt2012}
@@ -301,22 +302,24 @@ Gl{\o}rstad, H \harvardyearleft 2013\harvardyearright{}. Where are the missing
 \harvarditem{Harrell}{2015}{harrell2015}
 Harrell, FE \harvardyearleft 2015\harvardyearright{}. \emph{Regression modeling
   strategies: with applications to linear models, logistic and ordinal
-  regression, and survival analysis}. 2nd ed.
+  regression, and survival analysis}.
+\newblock 2nd ed.
 \newblock New York: Springer.
 
 \harvarditem[Harris, Kingsley \& Sewell]{Harris, Kingsley \harvardand{}
   Sewell}{2015}{harris2015}
 Harris, MD, Kingsley, RG \harvardand{} Sewell, AR \harvardyearleft
   2015\harvardyearright{}. \emph{Archaeological Predictive Model Set}.
+\newblock Final report. Volume 7.
 \newblock Harrisburg: Commonwealth of Pennsylvania, Department of
   Transportation.
-\newblock Final report. Volume 7.
 
 \harvarditem[Hastie, Tibshirani \& Friedman]{Hastie, Tibshirani \harvardand{}
   Friedman}{2017}{hastie2009}
 Hastie, T, Tibshirani, R \harvardand{} Friedman, J \harvardyearleft
   2017\harvardyearright{}. \emph{The Elements of Statistical Learning: Data
-  Mining, Inference, and Prediction}. 2nd ed.
+  Mining, Inference, and Prediction}.
+\newblock 2nd ed.
 \newblock New York: Springer.
 
 \harvarditem[Henderson \& Denison]{Henderson \harvardand{}
@@ -338,7 +341,8 @@ Hill, NA, Pepper, AR, Puotinen, ML, Hughes, MG, Edgar, GJ, Barrett, NS,
 \harvarditem[Hosmer, Lemeshow \& Sturdivant]{Hosmer, Lemeshow \harvardand{}
   Sturdivant}{2013}{hosmer2013}
 Hosmer, DW, Lemeshow, S \harvardand{} Sturdivant, RX \harvardyearleft
-  2013\harvardyearright{}. \emph{Applied logistic regression}. 3rd ed.
+  2013\harvardyearright{}. \emph{Applied logistic regression}.
+\newblock 3rd ed.
 \newblock Hoboken: John Wiley \& Sons.
 \newblock DOI: https://doi.org/10.1002/9781118548387.
 
@@ -401,7 +405,7 @@ Kvamme, KL \harvardand{} Jochim, MA \harvardyearleft 1989\harvardyearright{}.
 
 \harvarditem{Laing}{1998}{laing1998}
 Laing, AK \harvardyearleft 1998\harvardyearright{}. An introduction to ocean
-  waves. In: \emph{Guide to Wave Analysis and Forecasting}, 2nd ed.
+  waves. In: \emph{Guide to Wave Analysis and Forecasting}. 2nd ed.
 \newblock Geneva: World Meteorological Organization, pp. 1--14.
 
 \harvarditem[Lake \& Woodman]{Lake \harvardand{} Woodman}{2000}{lake2000}
@@ -438,8 +442,9 @@ Malek, MH, Berger, DE \harvardand{} Coburn, JW \harvardyearleft
 Malhotra, A \harvardand{} Fonseca, MS \harvardyearleft 2007\harvardyearright{}.
   \emph{{WEMo} ({Wave Exposure Model}): formulation, procedures and
   validation}.
-\newblock Beaufort, North Carolina.
 \newblock NOAA Technical Memorandum NOS NCCOS \#65.
+\newblock Beaufort, North Carolina: National Ocean Service of the National
+  Oceanic and Atmospheric Administration.
 
 \harvarditem{Mansrud}{2014}{mansrud2014}
 Mansrud, A \harvardyearleft 2014\harvardyearright{}. Mobil eller bofast?
@@ -592,12 +597,13 @@ Solheim, S \harvardand{} Persson, P \harvardyearleft 2016\harvardyearright{}.
   \harvardand{} Zangrando, AFJ (eds.), \emph{Marine Ventures: Archaeological
   Perspectives on Human-Sea Relations}.
 \newblock Sheffield: Equinox Publishing, pp. 255--270.
+\newblock DOI: https://doi.org/10.1558/equinox.24568.
 
 \harvarditem[S{\o}rensen et~al.]{S{\o}rensen, Henningsmoen, H{\o}eg
   \harvardand{} G{\"a}lman}{2014}{sorensen2014}
 S{\o}rensen, R, Henningsmoen, KE, H{\o}eg, H \harvardand{} G{\"a}lman, V
   \harvardyearleft 2014\harvardyearright{}. Holocene landhevningsstudier i
-  s{\o}ndre {Vestfold} og s{\o}r{\o}stre {Telemark} -- revidert kurve. In:
+  s{\o}ndre {Vestfold} og s{\o}r{\o}stre {Telemark} -- {Revidert} kurve. In:
   \emph{Vestfoldbaneprosjektet. {A}rkeologiske unders{\o}kelser i forbindelse
   med ny jernbane mellom {Larvik} og {Porsgrunn} kommune. Bind 1}.
 \newblock Oslo: Museum of Cultural History, University of Oslo, pp. 236--247.
@@ -607,9 +613,8 @@ S{\o}rensen, R, Henningsmoen, KE, H{\o}eg, H \harvardand{} G{\"a}lman, V
   \harvardand{} G{\"a}lman}{2015}{sorensen2015}
 S{\o}rensen, R, H{\o}eg, H \harvardand{} G{\"a}lman, V \harvardyearleft
   2015\harvardyearright{}. \emph{Revidert strandlinjeforskyvningskurve for
-  Bamble}. Tech. rep.
-\newblock Report for the Project E18 Rugtvedt-D{\o}rdal. Museum of Cultural
-  History, Unversity of Oslo.
+  {Bamble}}.
+\newblock Oslo: Museum of Cultural History, University of Oslo.
 
 \harvarditem[Spencer \& Bevan]{Spencer \harvardand{} Bevan}{2018}{spencer2018}
 Spencer, C \harvardand{} Bevan, A \harvardyearleft 2018\harvardyearright{}.

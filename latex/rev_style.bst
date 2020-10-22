@@ -1064,6 +1064,8 @@ FUNCTION {book}
   format.date "year" output.check
   date.block
   format.btitle "title" output.check
+  after.block 'output.state :=
+  format.note output
   crossref missing$
     { format.bvolume output
   new.sentence
@@ -1077,7 +1079,6 @@ FUNCTION {book}
     }
   if$
   format.doi output
-  format.note output
   fin.entry
   write.url
 }
@@ -1145,6 +1146,7 @@ FUNCTION {incollection}
   new.sentence
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
+  new.sentence
       format.number.series output
       format.edition output
       format.chapter.pages output
