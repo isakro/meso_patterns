@@ -202,7 +202,7 @@ rfplot_func <- function (input_data, accuracy = TRUE, impute = TRUE,
           panel.grid.major = element_blank(), 
           axis.title = element_text(size = 8),
           plot.title = element_text(hjust = 0.5),
-          plot.margin = margin(t = 0, r = 0.1, b = 0, l = 0, unit = "pt")) +
+          plot.margin = plot.margin = unit(c(5.5, 10, 5.5, 5,5), "pt")) +
     scale_y_continuous(labels = function(x) round(x, 2)) +
     coord_flip()
   
