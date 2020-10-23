@@ -1,6 +1,6 @@
 # meso_patterns
 
-This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analyses is available in the directory *gis_output*, making it possible to skip straight to the statistical treatment in R. See section 5 below for licenses associated with the contents of the repository.
+This repository holds data, code, figures and text files for the paper "Algorithmic classification and statistical modelling of coastal settlement patterns in Mesolithic south-eastern Norway". The output from the GIS analyses is available in the directory *gis_output*, making it possible to skip straight to the statistical treatment in R. See section 5 below for licences associated with the contents of the repository.
 
 ### 1. Repository contents (listed in order of analysis)
 
@@ -50,7 +50,7 @@ Stray finds: https://kartkatalog.geonorge.no/metadata/17150d2c-b50d-4792-80f4-0c
 The site data has additionally been given a quality score based on the information available from the database *Askeladden*, associated with the spatial geometries (see article for more on this). The database is run by the Directorate for Cultural Heritage. This is not open, but researchers, students, and cultural resource management personell can apply for access:
 https://askeladden.ra.no/Askeladden (the page is currently only available in Norwegian). The sites can be found using the IDs provided in the column 'askeladden_id' of *sites.gpkg*.
 
-### 5. Licenses
+### 5. Licences
 The following data are under [the Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0):  
 * *sites.gpkg* is slightly modified site data originally provided by the Norwegian Directorate for Cultural Heritage (see section 4 above).  
 * *lakes.gpkg* is from "the Norwegian lake database" as provided by [the Norwegian Water Resources and Energy Directorate](http://nedlasting.nve.no/gis/) (page only available in Norwegian).  
