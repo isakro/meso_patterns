@@ -556,7 +556,11 @@ def diagonal(regionRaster):
     return(diag)
 
 # Function to estimate average fetch from a point, 
-# using two rasters (studyarea and larger region).       
+# using two rasters (studyarea and larger region).
+# The shoreline of studyarea is adjusted, while the
+# present day coastline is used for the larger region.
+# Any fetchlines extending westwards towards Britain will
+# also be cut short.        
 def computeFetch(pointFeature, pointData, mapMax,
                  dtmMap, regionVect, nIntervals):
     
@@ -935,7 +939,7 @@ grass.run_command('v.import',
 # ending in .tif).
 study_dtms = []
 for file in os.listdir(os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data\studyarea')):
+                                    'gis_data', 'studyarea')):
     if file.endswith(".tif"):
         study_dtms.append(file)
 
@@ -945,7 +949,7 @@ study_names = []
 for i, n in enumerate(study_dtms, start=1):
     grass.run_command('r.import',
                       input = os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data\studyarea', n),
+                                    'gis_data', 'studyarea', n),
                       output = 'studyarea_' + str(i), overwrite = True)
     study_names.append('studyarea_' + str(i))
 
@@ -961,7 +965,7 @@ grass.run_command('r.patch', input = ','.join(study_names),
 # region.
 region_dtms = []
 for file in os.listdir(os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data\\region')): # Note double escape
+                                    'gis_data', 'region')):
     if file.endswith(".tif"):
         region_dtms.append(file)
 
@@ -969,7 +973,7 @@ region_names = []
 for i, n in enumerate(region_dtms, start=1):
     grass.run_command('r.import',
                       input = os.path.join(os.path.dirname(os.getcwd()),
-                                    'gis_data\\region', n),
+                                    'gis_data', 'region', n),
                       output = 'region_' + str(i), overwrite = True)
     region_names.append('region_' + str(i))
 
