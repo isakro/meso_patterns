@@ -9,7 +9,7 @@
 # and running the code in the shell:
 
 # import os
-# os.chdir([insert local filepath]/analysis.py')
+# os.chdir([insert local filepath]/meso_patterns/python')
 # execfile('analysis.py')
 
 import os
@@ -37,10 +37,10 @@ splitNorth = "reg_split_north"
 
 # Path to precompiled shoreline displacement curves formatted for r.recode.
 # Used with emergence().
-recodeBamble = os.path.join(os.getcwd(),
-                            '../gis_data/shoreline/recode_bamble.txt')
-recodeGunnarsrod = os.path.join(os.getcwd(),
-                                '../gis_data/shoreline/recode_gunnarsrod.txt')
+recodeBamble = os.path.join(os.getcwd(), '..', 'gis_data' , 'shoreline',
+                            'recode_bamble.txt')
+recodeGunnarsrod = os.path.join(os.getcwd(), '..', 'gis_data', 'shoreline',
+                                'recode_gunnarsrod.txt')
 
 # Specifies in how many directions fetch should be estimated.
 # Used in computeFetch().
@@ -1011,8 +1011,8 @@ grass.run_command('v.db.addcolumn', map = sitesTmp,
 # Retrieve shoreline displacement curve for Bamble. This consists of two curves
 # representing the confidence interval. Here this uncertainty is simply ignored
 # and the mean of the two lines is used.
-bamble = genfromtxt('../gis_data/shoreline/bamble_curve.csv',
-                    delimiter = ',', names = True)
+bamble = genfromtxt(os.path.join('..', 'gis_data', 'shoreline',
+                    'bamble_curve.csv'), delimiter = ',', names = True)
 bamble['upperx'] = (bamble['upperx'] - 1950) * -1
 bamble['lowerx'] = (bamble['lowerx'] - 1950) * -1
 
@@ -1052,8 +1052,8 @@ for row in elevByRow[1:-1]:
     
 # Repeat above steps for sites in Gunnarsrod area
 # (Porsgrunn and Larvik municipalities).
-gunnarsrod = genfromtxt('../gis_data/shoreline/gunnarsrod_curve.csv',
-                        delimiter = ',', names = True)
+gunnarsrod = genfromtxt(os.path.join('..', 'gis_data', 'shoreline',
+                        'gunnarsrod_curve.csv'), delimiter = ',', names = True)
 gunnarsrod['upperx'] = (gunnarsrod['upperx'] - 1950) * -1
 gunnarsrod['lowerx'] = (gunnarsrod['lowerx'] - 1950) * -1
 
@@ -1347,9 +1347,9 @@ computeFetch(samplePts, sampleData, maxDist, dtmExp, regSeaVect, nInterval)
 
 # Export attribute tables as csv files.
 grass.run_command('db.out.ogr', overwrite = True, input = siteCentPts,
-                  output = '../gis_output/site_data.csv')
+                  output = os.path.join('..', 'gis_output', 'site_data.csv'))
 grass.run_command('db.out.ogr', overwrite = True, input = samplePts,
-                  output = '../gis_output/sample_data.csv')
+                  output = os.path.join('..', 'gis_output', 'sample_data.csv'))
 
 # Print the time it took to execute the script.
 print datetime.now() - startTime
