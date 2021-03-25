@@ -1,6 +1,6 @@
 # meso_patterns
 
-This repository holds data, code, figures and text files for the paper  Roalkvam, I., 2020. Algorithmic Classification and Statistical Modelling of Coastal Settlement Patterns in Mesolithic South-Eastern Norway. *Journal of Computer Applications in Archaeology*, 3(1), pp.288–307. DOI: http://doi.org/10.5334/jcaa.60 
+This repository holds data, code, figures and text files for the paper  Roalkvam, I. <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-6974-1374" href="https://orcid.org/0000-0001-6974-1374" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-6974-1374</a></div> , 2020. Algorithmic Classification and Statistical Modelling of Coastal Settlement Patterns in Mesolithic South-Eastern Norway. *Journal of Computer Applications in Archaeology*, 3(1), pp.288–307. DOI: http://doi.org/10.5334/jcaa.60 
 
 The output from the GIS analyses is available in the directory *gis_output*, making it possible to skip straight to the statistical treatment in R. See section 5 below for licences associated with the contents of the repository.
 
